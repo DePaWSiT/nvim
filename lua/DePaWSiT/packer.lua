@@ -14,4 +14,12 @@ return require('packer').startup(function(use)
 	}
 	use 'tanvirtin/monokai.nvim'
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+	use {
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup {}
+		end
+	}
 end)
