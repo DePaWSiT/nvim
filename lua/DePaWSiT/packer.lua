@@ -22,4 +22,7 @@ return require('packer').startup(function(use)
 			require("nvim-autopairs").setup {}
 		end
 	}
+	use("theprimeagen/harpoon")
+	use("mbbill/undotree")
+	use("tpope/vim-fugitive")
 end)
