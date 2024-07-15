@@ -1,5 +1,5 @@
 --Color scheme
-require('monokai').setup { palette = require('monokai').soda }
+require('monokai').setup { palette = require('monokai').soda}
 
 --transparant background
 function SetBackground(color)
