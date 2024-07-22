@@ -1,1 +1,2 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+require('DePaWSiT.remap')
+vim.keymap.set("n", FUGITIVE_GIT_STATUS, vim.cmd.Git)

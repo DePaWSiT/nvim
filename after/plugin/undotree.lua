@@ -1,1 +1,2 @@
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+require('DePaWSiT.remap')
+vim.keymap.set("n", UNDOTREE_TOGGLE, vim.cmd.UndotreeToggle)
