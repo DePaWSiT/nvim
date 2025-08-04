@@ -3,6 +3,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 RandomKeymap = "leaderText"
 
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
 --plugin keybindings
 FUGITIVE_GIT_STATUS = '<leader>gs'
 
@@ -19,7 +22,7 @@ HARPOON_NAV_4 = '<leader>h4'
 --Telescope
 TELESCOPE_FIND_FILES = '<leader>fs'
 TELESCOPE_GIT_SEARCH = '<leader> gf'
-TELESCOPE_GREP_SEARCH = '<C-p>'
+TELESCOPE_GREP_SEARCH = '<C-p>' --requires 'ripgrep' to be installed
 
 --Undotree
 UNDOTREE_TOGGLE = '<leader>u'
@@ -56,11 +59,13 @@ UNDOTREE_TOGGLE = '<leader>u'
 -- :Git with no option opens a summary window, use g? to show a couple of maps for actions
 -- :Git commit and other commands that invoke the editor will use vim
 -- :Git diff and other verbose, paginated commands have their output loaded in a temp buffer
--- :Git blame uses a temp buffer with maps, press enter to view where the line changed or g? to see other aviablabe maps
+-- :Git blame uses a temp buffer with maps, press enter to view where the line changed or g? to see other available maps
 -- :Git mergetool and difftool load their changesets into the quickfix list
 -- :Gdiffsplit 	for side by side comparison of the staged and working-tree version of a file
 -- :Gwrite 	writes to both the working-tree and the staged version
 -- :Gdelete 	removes the buffer and does a git rm on the staging
 --
--- 
+-- DOTNET CONTROLS
+-- :Dotnet to show all the controls available
+-- Most features require some additional dotnet tool, go to easy-dotnet.nvim repo for full install
 -- ]==]
