@@ -27,6 +27,8 @@ TELESCOPE_GREP_SEARCH = '<C-p>' --requires 'ripgrep' to be installed
 --Undotree
 UNDOTREE_TOGGLE = '<leader>u'
 
+--Nvim-tree
+NVIM_TREE_TOGGLE = '<leader>tt'
 --[==[
 --UnListed Plugin controls
 -- BLINK (autocomplete) CONTROLS
@@ -68,4 +70,9 @@ UNDOTREE_TOGGLE = '<leader>u'
 -- DOTNET CONTROLS
 -- :Dotnet to show all the controls available
 -- Most features require some additional dotnet tool, go to easy-dotnet.nvim repo for full install
+--
+-- NVIM TREE CONTROLS
+-- :NvimTreeOpen to open the tree, then do g? to show the mappings
+-- or do :help nvim-tree-commands
+--
 -- ]==]
