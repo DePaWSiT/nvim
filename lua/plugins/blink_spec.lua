@@ -33,15 +33,6 @@ return {
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
-	  providers = {
-		["easy-dontnet"] = {
-			name = "easy-dontnet",
-			enabled = true,
-			module = "easy-dontnet.completion.blink",
-			score_offset = 10000,
-			async = true,
-			},
-		},
 	},
 
 
