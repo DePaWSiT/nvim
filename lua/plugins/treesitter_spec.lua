@@ -1,14 +1,17 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     branch = "master",
-    lazy = "false",
+    lazy = true,
+	enabled = true,
     build = ":TSUpdate",
     config = function()
-        local configs = require("nvim-treesitter.configs")
-        configs.setup({
+		local configs = require("nvim-treesitter.configs")
+		--List C compilers to use
+		require 'nvim-treesitter.install'.compilers = { "gcc", "zig" }
+		configs.setup({
             -- A list of parser names, or "all" (the listed parsers MUST always be installed)
             ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-
+			
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = true,
 
@@ -18,7 +21,6 @@ return {
 
             ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
             -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
             highlight = { enable = true },
         })
     end
