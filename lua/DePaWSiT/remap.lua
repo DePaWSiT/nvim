@@ -25,11 +25,12 @@ TELESCOPE_GIT_SEARCH = '<leader> gf'
 TELESCOPE_GREP_SEARCH = '<C-p>' --requires 'ripgrep' to be installed
 
 --Undotree
-UNDOTREE_TOGGLE = '<leader>u'
+UNDOTREE_TOGGLE = '<leader>ut'
 
 --Nvim-tree
 NVIM_TREE_TOGGLE = '<leader>tt'
 --[==[
+
 --UnListed Plugin controls
 -- BLINK (autocomplete) CONTROLS
     ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
@@ -75,4 +76,40 @@ NVIM_TREE_TOGGLE = '<leader>tt'
 -- :NvimTreeOpen to open the tree, then do g? to show the mappings
 -- or do :help nvim-tree-commands
 --
+--
+-- JAVA
+--:JavaBuildBuildWorkspace - Runs a full workspace build
+--:JavaBuildCleanWorkspace - Clear the workspace cache (for now you have to close and reopen to restart the language server after the deletion)
+--
+--Runner
+--:JavaRunnerRunMain - Runs the application or selected main class (if there are multiple main classes)
+--:JavaRunnerRunMain <arguments> <to> <pass>
+--:JavaRunnerStopMain - Stops the running application
+--:JavaRunnerToggleLogs - Toggle between show & hide runner log window
+--
+--DAP
+--:JavaDapConfig - DAP is autoconfigured on start up, but in case you want to force configure it again, you can use this API
+--
+--Test
+--:JavaTestRunCurrentClass - Run the test class in the active buffer
+--:JavaTestDebugCurrentClass - Debug the test class in the active buffer
+--:JavaTestRunCurrentMethod - Run the test method on the cursor
+--:JavaTestDebugCurrentMethod - Debug the test method on the cursor
+--:JavaTestViewLastReport - Open the last test report in a popup window
+--
+--Profiles
+--:JavaProfile - Opens the profiles UI
+--
+--Refactor
+--:JavaRefactorExtractVariable - Create a variable from value at cursor/selection
+--:JavaRefactorExtractVariableAllOccurrence - Create a variable for all occurrences from value at cursor/selection
+--:JavaRefactorExtractConstant - Create a constant from the value at cursor/selection
+--:JavaRefactorExtractMethod - Create a method from the value at cursor/selection
+--:JavaRefactorExtractField - Create a field from the value at cursor/selection
+--
+--Settings
+--:JavaSettingsChangeRuntime - Change the JDK version to another
+--
+--DB-MANAGEMENT
+--:DBUI - Opening the ui for dadbod-ui
 -- ]==]
