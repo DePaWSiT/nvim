@@ -10,6 +10,5 @@ return {
 		require("DePaWSiT.remap")
 		vim.keymap.set("n", NVIM_TREE_TOGGLE, api.tree.toggle)
 		api.tree.open()
-		vim.cmd("au VimEnter * wincmd l")
 		end
 }
