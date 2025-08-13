@@ -32,31 +32,41 @@ NVIM_TREE_TOGGLE = '<leader>tt'
 --[==[
 
 --UnListed Plugin controls
+--LSP CONTROLS
+--grn is mapped in Normal mode to vim.lsp.buf.rename()
+--gra is mapped in Normal and Visual mode to vim.lsp.buf.code_action()
+--grr is mapped in Normal mode to vim.lsp.buf.references()
+--gri is mapped in Normal mode to vim.lsp.buf.implementation()
+--grt is mapped in Normal mode to vim.lsp.buf.type_definition()
+--gO is mapped in Normal mode to vim.lsp.buf.document_symbol()
+--K is mapped to vim.lsp.buf.hover(), creating a buffer showing function documentation, buffer is closed with :q or just q
+--CTRL-S is mapped in Insert mode to vim.lsp.buf.signature_help()
+--
 -- BLINK (autocomplete) CONTROLS
-    ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-    ['<C-e>'] = { 'hide', 'fallback' },
-    
-    ['<Tab>'] = {
-      function(cmp)
-        if cmp.snippet_active() then return cmp.accept()
-        else return cmp.select_and_accept() end
-      end,
-      'snippet_forward',
-      'fallback'
-    },
-    ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
-    
-    ['<Up>'] = { 'select_prev', 'fallback' },
-    ['<Down>'] = { 'select_next', 'fallback' },
-    ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
-    ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
-    
-    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
-    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
-    
-    ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' }
-
-
+--['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+--    ['<C-e>'] = { 'hide', 'fallback' },
+--    
+--    ['<Tab>'] = {
+--      function(cmp)
+--        if cmp.snippet_active() then return cmp.accept()
+--        else return cmp.select_and_accept() end
+--      end,
+--      'snippet_forward',
+--      'fallback'
+--    },
+--    ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+--    
+--    ['<Up>'] = { 'select_prev', 'fallback' },
+--    ['<Down>'] = { 'select_next', 'fallback' },
+--    ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+--    ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
+--    
+--    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+--    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+--    
+--    ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' }
+--
+--
 -- FUGITIVE CONTROLS (:help fugitive)
 -- :Git for regular git actions from the commandline
 -- :Git with no option opens a summary window, use g? to show a couple of maps for actions
@@ -75,7 +85,6 @@ NVIM_TREE_TOGGLE = '<leader>tt'
 -- NVIM TREE CONTROLS
 -- :NvimTreeOpen to open the tree, then do g? to show the mappings
 -- or do :help nvim-tree-commands
---
 --
 -- JAVA
 --:JavaBuildBuildWorkspace - Runs a full workspace build
