@@ -7,10 +7,12 @@ return {
 		enable_close_on_slash = false
 	},
 	config = function(opts)
-		require("nvim-ts-autotag").setup(opts)
-		--override defaults
-		per_filetype = {
-			["html"] = { enable_close = true }
-		}
+		require("nvim-ts-autotag").setup({
+			opts,
+			--override defaults
+			per_filetype = {
+				["html"] = { enable_close = true }
+			},
+		})
 	end,
 }

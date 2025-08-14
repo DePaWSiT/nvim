@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.8",
-	dependencies = { 
+	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
 	config = function()
@@ -13,5 +13,11 @@ return {
 		vim.keymap.set('n', TELESCOPE_GREP_SEARCH, function()
 			builtin.grep_string({search = vim.fn.input("grep > ")});
 		end)
-	end
+
+		require("telescope").setup({
+			defaults = {
+				file_ignore_patterns = { "%__virtual.cs%" },
+			},
+		})
+	end,
 }

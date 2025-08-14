@@ -102,6 +102,15 @@ CYCLE_SIGNATURE = "<C-o>"
 --
 --DAP
 --:JavaDapConfig - DAP is autoconfigured on start up, but in case you want to force configure it again, you can use this API
+--Continue - 	F5
+--Step over - F10 / <leader>d0
+--Step into - F11
+--Step out - 	F12
+--breakpoint- <leader>b
+--to_cursor - <leader>dC
+--repl togg - <leader>dr
+--stack down- <leader>dj
+--stack up 	-	<leader>dk
 --
 --Test
 --:JavaTestRunCurrentClass - Run the test class in the active buffer
