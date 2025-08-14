@@ -1,5 +1,6 @@
 return {
 	"airblade/vim-gitgutter",
+	lazy = true,
 	config = function ()
 		vim.cmd("set updatetime=200")
 		vim.cmd("nmap ]h <Plug>(GitGutterNextHunk)")

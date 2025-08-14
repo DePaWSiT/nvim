@@ -29,6 +29,10 @@ UNDOTREE_TOGGLE = '<leader>ut'
 
 --Nvim-tree
 NVIM_TREE_TOGGLE = '<leader>tt'
+
+--LSP-Signature
+TOGGLE_KEY = "<C-n>"
+CYCLE_SIGNATURE = "<C-o>"
 --[==[
 
 --UnListed Plugin controls

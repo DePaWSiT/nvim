@@ -1,14 +1,27 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("nvim-tree").setup({
-				view = {
-					width = 42
-				},
-			})
+	config = function()
+		local function my_on_attach(bufnr)
+			local api = require "nvim-tree.api"
+
+			local function opts(desc)
+				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+			end
+
+			-- default mappings
+			api.config.mappings.default_on_attach(bufnr)
+
+			-- custom mappings
+			vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+		end
+		require("nvim-tree").setup({
+			on_attach = my_on_attach,
+			view = {
+				width = 42
+			},
+		})
 		local api = require("nvim-tree.api")
 		require("DePaWSiT.remap")
 		vim.keymap.set("n", NVIM_TREE_TOGGLE, api.tree.toggle)
-		api.tree.open()
-		end
+	end
 }
