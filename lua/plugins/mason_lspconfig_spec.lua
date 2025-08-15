@@ -1,23 +1,19 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
-	opts = {},
+	opts = {
+		automatic_enable = {
+			exlclude = {
+				"roslyn",
+				"rzls",
+			}
+		},
+		ensure_installed = {
+			"html",
+			"lua_ls",
+		},
+	},
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
 		"neovim/nvim-lspconfig",
 	},
-	config = function()
-		require("mason-lspconfig").setup({
-			automatic_enable = {
-				exlclude = {
-					"roslyn",
-					"rzls",
-				}
-			},
-
-			ensure_installed = {
-				"html",
-				"lua_ls",
-			},
-		})
-	end,
 }

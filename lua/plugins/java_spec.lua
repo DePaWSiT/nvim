@@ -1,6 +1,9 @@
 return {
 	"nvim-java/nvim-java",
-	lazy = false,
+	ft = { "java" },
+	depdencies = {
+		"neovim/nvim-lspconfig"
+	},
 	config = function()
 		require("java").setup()
 		require("lspconfig").jdtls.setup({})

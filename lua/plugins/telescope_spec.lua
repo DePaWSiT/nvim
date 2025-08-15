@@ -4,6 +4,11 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
+	opts = {
+		defaults = {
+			file_ignore_patterns = { "%__virtual.cs%" },
+		},
+	},
 	config = function()
 		require('DePaWSiT.remap')
 		require('telescope').load_extension('harpoon')
@@ -13,11 +18,5 @@ return {
 		vim.keymap.set('n', TELESCOPE_GREP_SEARCH, function()
 			builtin.grep_string({search = vim.fn.input("grep > ")});
 		end)
-
-		require("telescope").setup({
-			defaults = {
-				file_ignore_patterns = { "%__virtual.cs%" },
-			},
-		})
 	end,
 }

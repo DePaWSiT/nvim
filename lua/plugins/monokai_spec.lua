@@ -1,7 +1,7 @@
 return {
 	"loctvl842/monokai-pro.nvim",
-	config = function()
-		require("monokai-pro").setup()
-		vim.cmd("MonokaiPro classic")
+	opts = {},
+	init = function()
+		vim.cmd([[colorscheme monokai-pro-classic]])
 	end,
 }

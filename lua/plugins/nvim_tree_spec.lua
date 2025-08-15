@@ -1,5 +1,10 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	opts = {
+		view = {
+			width = 42
+		},
+	},
 	config = function()
 		local function my_on_attach(bufnr)
 			local api = require "nvim-tree.api"
@@ -15,10 +20,7 @@ return {
 			vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 		end
 		require("nvim-tree").setup({
-			on_attach = my_on_attach,
-			view = {
-				width = 42
-			},
+			on_attach = my_on_attach
 		})
 		local api = require("nvim-tree.api")
 		require("DePaWSiT.remap")

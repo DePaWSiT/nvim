@@ -29,12 +29,19 @@ return {
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
-			default = { 'lsp', 'path', 'snippets', 'buffer' },
+			default = { 'lsp', 'easy-dotnet', 'path', 'snippets', 'buffer' },
 			per_filetype = {
 				sql = { 'snippets', 'dadbod', 'buffer' },
 			},
 			providers = {
 				dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+				["easy-dotnet"] = {
+					name = "easy-dotnet",
+					enabled = true,
+					module = "easy-dotnet.completion.blink",
+					score_offset = 10000,
+					async = true,
+				},
 			},
 		},
 
