@@ -1,5 +1,6 @@
 return {
 	"ray-x/lsp_signature.nvim",
+	event = "BufRead",
 	opts = {
 		require('DePaWSiT.remap'),
 		bind = true,

@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	keys = { "<leader>tt", "<cmd>require('nvim-tree.api').tree.toggle()<cr>" }, 
 	opts = {
 		view = {
 			width = 42

@@ -2,6 +2,7 @@ return {
 	'saghen/blink.cmp',
 	-- optional: provides snippets for the snippet source
 	dependencies = { 'rafamadriz/friendly-snippets' },
+	event = "InsertEnter",
 	version = '1.*',
 	opts = {
 		-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)

@@ -1,5 +1,6 @@
 return {
 	"mfussenegger/nvim-dap",
+	event = "BufRead",
 	config = function()
 		local dap = require "dap"
 

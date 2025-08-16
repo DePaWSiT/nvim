@@ -1,5 +1,6 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
+	event = "BufRead",
 	opts = {
 		automatic_enable = {
 			exlclude = {
