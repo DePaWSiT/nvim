@@ -1,6 +1,6 @@
 return {
 	"mason-org/mason.nvim",
-	event = "BufRead",
+	event = "VeryLazy",
 	opts = {
 		registries = {
 			"github:mason-org/mason-registry",

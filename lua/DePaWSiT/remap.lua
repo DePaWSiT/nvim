@@ -3,17 +3,14 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 RandomKeymap = "leaderText"
 
-vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
-
 --plugin keybindings
 FUGITIVE_GIT_STATUS = '<leader>gs'
 
 --Harpoon
 HARPOON_ADD_FILE = '<leader>ha'
 HARPOON_TOGGLE_MENU = '<leader>hh'
-HARPOON_NAV_NEXT = '<leader>hn'
-HARPOON_NAV_PREV = '<leader>hp'
+HARPOON_NAV_NEXT = '<leader>]'
+HARPOON_NAV_PREV = '<leader>['
 HARPOON_NAV_1 = '<leader>h1'
 HARPOON_NAV_2 = '<leader>h2'
 HARPOON_NAV_3 = '<leader>h3'
@@ -21,7 +18,7 @@ HARPOON_NAV_4 = '<leader>h4'
 
 --Telescope
 TELESCOPE_FIND_FILES = '<leader>fs'
-TELESCOPE_GIT_SEARCH = '<leader> gf'
+TELESCOPE_GIT_SEARCH = '<leader>gf'
 TELESCOPE_GREP_SEARCH = '<C-p>' --requires 'ripgrep' to be installed
 
 --Undotree
@@ -31,11 +28,26 @@ UNDOTREE_TOGGLE = '<leader>ut'
 NVIM_TREE_TOGGLE = '<leader>tt'
 
 --LSP-Signature
-TOGGLE_KEY = "<C-n>"
-CYCLE_SIGNATURE = "<C-o>"
+TOGGLE_KEY = '<C-n>'
+CYCLE_SIGNATURE = '<C-o>'
+
+--LSP-Config
+LSP_DECLARATION = 'gD'
+LSP_DEFINITION = 'gd'
+
+--GitGutter
+NEXT_HUNK = ']h'
+PREV_HUNK = '[h'
+--<leader>hp - preview hunk
+--<leader>hs - stage hunk
+--<leader>hu - unstage hunk
+--
 --[==[
 
 --UnListed Plugin controls
+--Autopair
+--<cr> - extend brackets to new line
+--
 --LSP CONTROLS
 --grn is mapped in Normal mode to vim.lsp.buf.rename()
 --gra is mapped in Normal and Visual mode to vim.lsp.buf.code_action()
