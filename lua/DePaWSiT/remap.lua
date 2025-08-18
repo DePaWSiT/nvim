@@ -42,6 +42,14 @@ PREV_HUNK = '[h'
 --<leader>hs - stage hunk
 --<leader>hu - unstage hunk
 --
+--Snip
+EXPAND = "<C-j>"
+EXPAND_OR_JUMP = "<C-l>"
+JUMP_NEXT = "<Tab>"
+JUMP_PREV = "<S-Tab>"
+SNIP_SELECT = "ss"
+SNIP_CUT = "sc"
+--
 --GRUG Search and Replace
 --SEARCH_AND_REPLACE = '<leader>sr' 
 --
