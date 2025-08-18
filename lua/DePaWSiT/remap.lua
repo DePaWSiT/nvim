@@ -25,7 +25,7 @@ TELESCOPE_GREP_SEARCH = '<C-p>' --requires 'ripgrep' to be installed
 UNDOTREE_TOGGLE = '<leader>ut'
 
 --Nvim-tree
-NVIM_TREE_TOGGLE = '<leader>tt'
+NVIM_TREE_TOGGLE = '<leader>tt' --KEY EVENT
 
 --LSP-Signature
 TOGGLE_KEY = '<C-n>'
@@ -41,6 +41,27 @@ PREV_HUNK = '[h'
 --<leader>hp - preview hunk
 --<leader>hs - stage hunk
 --<leader>hu - unstage hunk
+--
+--GRUG Search and Replace
+--SEARCH_AND_REPLACE = '<leader>sr' 
+--
+--Trouble lsp info
+--<leader>xx - diagnostic toggle
+--<leader>xX - diagnostic toggle filter
+--<leader>cs - symbols toggle
+--<leader>cS - lsp toggle
+--<leader>xL - loclist toggle
+--<leader>xQ - qflist toggle
+--[q - previous trouble item
+--]q - next trouble item
+--
+--ToDo Comments
+--<leader>xt - trouble todo toggle
+--<leader>xT - trouble todo toggle filter
+--<leader>st - todo telescope
+--<leader>sT - todo telescope with keywords
+--]t - next todo comments
+--[t - previous todo comments
 --
 --[==[
 

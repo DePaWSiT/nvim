@@ -30,7 +30,7 @@ return {
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
-			default = { 'lsp', 'easy-dotnet', 'path', 'snippets', 'buffer' },
+			default = { 'lsp', 'easy-dotnet', 'lazydev', 'path', 'snippets', 'buffer' },
 			per_filetype = {
 				sql = { 'snippets', 'dadbod', 'buffer' },
 			},
@@ -42,6 +42,11 @@ return {
 					module = "easy-dotnet.completion.blink",
 					score_offset = 10000,
 					async = true,
+				},
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					score_offset = 1000,
 				},
 			},
 		},
