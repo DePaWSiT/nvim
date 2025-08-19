@@ -48,7 +48,7 @@ Unix
 if you wanna go crazy, use :checkhealth and install as many warnings as you want
 
 ## Treesitter
-[mingw-64](https://www.mingw-w64.org/downloads)
+Wnidows only: [mingw-64](https://www.mingw-w64.org/downloads)/
 git
 
 ## Telescope
