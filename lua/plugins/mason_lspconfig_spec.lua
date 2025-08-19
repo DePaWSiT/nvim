@@ -14,7 +14,7 @@ return {
 			}
 		},
 		ensure_installed = {
-			"html",
+			"html", --requires npm
 			"lua_ls",
 		},
 	},

@@ -3,6 +3,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 RandomKeymap = "leaderText"
 
+--Funny motions
+--gc[1][2] - comments [1] number of lines in [2] direction
+
 --plugin keybindings
 FUGITIVE_GIT_STATUS = '<leader>gs'
 
