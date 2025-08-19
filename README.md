@@ -11,14 +11,14 @@ check the font of the terminal, needs to be a [patched nerd font](https://www.ne
 
 ## Dadbod + Dotenv
 nothing here to install,
-[use env to keep connection](https://github.com/kristijanhusak/vim-dadbod-ui)
+[use env to keep connection](https://github.com/kristijanhusak/vim-dadbod-ui)\
 :Dotnet verbose to see what is in the env
 
 ## Easy-dotnet
-:MasonInstall rzls
-:MasonInstall jq
-:MasonInstall netcoredbg
-:MasonInstall roslyn
+:MasonInstall rzls\
+:MasonInstall jq\
+:MasonInstall netcoredbg\
+:MasonInstall roslyn\
 dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft.com/downloads/))
 dotnet tooling (terminal commands, requires sdk)
 - dotnet tool install -g EasyDotnet
