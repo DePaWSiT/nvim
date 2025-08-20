@@ -38,12 +38,27 @@ CYCLE_SIGNATURE = '<C-o>'
 LSP_DECLARATION = 'gD'
 LSP_DEFINITION = 'gd'
 
---GitGutter
-NEXT_HUNK = ']h'
-PREV_HUNK = '[h'
+--GitGutter (disabled)
+--NEXT_HUNK = ']h'
+--PREV_HUNK = '[h'
 --<leader>hp - preview hunk
 --<leader>hs - stage hunk
 --<leader>hu - unstage hunk
+--
+--
+--Gitsigns
+--]h - next hunk
+--[h - prev hunk
+--]H - last hunk
+--[H - first hunk
+--<leader>ghs - stage hunk
+--<leader>ghu - undo stage hunk
+--<leader>ghR - reset buffer
+--<leader>ghp - preview hunk inline
+--<leader>ghb - blame line
+--<leader>ghB - blame buffer
+--<leader>ghd - diff this
+--<leader>ghD - diff this ~
 --
 --Snip
 EXPAND = "<C-j>"

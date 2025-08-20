@@ -22,9 +22,9 @@ return {
 		vim.keymap.set("n", "<leader>dk", dap.up, { desc = "Go up stack frame" })
 
 		-- .NET specific setup using `easy-dotnet`
-		vim.loader.disable()
+		vim.loader.enable(false)
 		require("easy-dotnet.netcoredbg").register_dap_variables_viewer() -- special variables viewer specific for .NET
-		vim.loader.enable()
+		vim.loader.enable(true)
 		local dotnet = require("easy-dotnet")
 		local debug_dll = nil
 
