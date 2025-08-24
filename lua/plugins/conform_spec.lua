@@ -18,7 +18,7 @@ return {
 			xml = { "xmlformat" },  -- Works for both .xml and .xaml files
 		},
 		format_on_save = {
-			lsp_fallback = false,
+			lsp_fallback = true,
 			timeout_ms = 2000,  -- Increased timeout for larger files
 		},
 		formatters = {

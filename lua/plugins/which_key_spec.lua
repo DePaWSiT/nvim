@@ -1,6 +1,15 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
+	keys = {
+		{
+			"<leader>?",
+			function()
+				require("which-key").show({ global = false })
+			end,
+			desc = "Buffer Local Keymaps (which-key)",
+		},
+	},
 	init = function()
 		require('DePaWSiT.remap')
 		local wk = require("which-key")
@@ -24,12 +33,6 @@ return {
 			{TOGGLE_KEY, desc = "Toggle LSP Signature", icon = {icon = "󱡴", color = "purple"}},
 			{CYCLE_SIGNATURE, desc = "Cycle LSP Signature", icon = {icon = "", color = "purple"}},
 			--{LSP_DECLARATION, desc = "Go To Declaration"},
-			{LSP_DEFINITION, desc = "Go To Definition", icon = {icon = "󰞔", color = "purple"}},
-			{NEXT_HUNK, desc = "Next Hunk", icon = {icon = "", color = "red"}},
-			{PREV_HUNK, desc = "Prev Hunk", icon = {icon = "", color = "red"}},
-			{"<leader>hp", desc = "Preview Hunk", icon = {icon = "", color = "red"}},
-			{"<leader>hs", desc = "Stage Hunk", icon = {icon = "", color = "red"}},
-			{"<leader>hu", desc = "Unstage Hunk", icon = {icon = "", color = "red"}}
 		})
 	end,
 	opts = {

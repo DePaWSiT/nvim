@@ -19,12 +19,6 @@ return {
 					print("stderr:", table.concat(j:stderr_result(), "\n"))
 				end
 			end,
-			on_stdout = function(_, line)
-				print("stdout:", line)
-			end,
-			on_stderr = function(_, line)
-				print("stderr:", line)
-			end,
 		}):start()
 	end,
 }

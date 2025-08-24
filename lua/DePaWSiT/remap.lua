@@ -38,14 +38,6 @@ CYCLE_SIGNATURE = '<C-o>'
 LSP_DECLARATION = 'gD'
 LSP_DEFINITION = 'gd'
 
---GitGutter (disabled)
---NEXT_HUNK = ']h'
---PREV_HUNK = '[h'
---<leader>hp - preview hunk
---<leader>hs - stage hunk
---<leader>hu - unstage hunk
---
---
 --Gitsigns
 --]h - next hunk
 --[h - prev hunk
