@@ -24,6 +24,8 @@ dotnet tooling (terminal commands, requires sdk)
 - dotnet tool install -g EasyDotnet
 - dotnet tool install -g dotnet-outdated-tool
 - dotnet tool install -g dotnet-ef
+- dotnet tool install -g csharpier
+- (python required) pip install xmlformatter
 
 ## Lazy
 git

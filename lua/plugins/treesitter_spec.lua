@@ -18,6 +18,10 @@ return {
 
 			-- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 			highlight = { enable = true },
+			indent = {
+				enabled = true,
+				disable = { 'cs', 'xaml'}
+			}
 		}
 	end
 }

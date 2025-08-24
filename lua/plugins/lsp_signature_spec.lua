@@ -6,6 +6,7 @@ return {
 		max_width = function()
 			return vim.api.nvim_win_get_width(0) * 0.5
 		end,
+		hint_enable = false,
 		hint_prefix = {
 			above = "↙ ",  -- when the hint is on the line above the current line
 			current = "← ",  -- when the hint is on the same line
@@ -20,6 +21,7 @@ return {
 		},
 		transparency = 5.0,
 		toggle_key = TOGGLE_KEY,
+		toggle_key_flip_floatwin_setting = true,
 		select_signature_key = CYCLE_SIGNATURE,
 	},
 }
