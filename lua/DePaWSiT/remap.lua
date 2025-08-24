@@ -38,6 +38,18 @@ CYCLE_SIGNATURE = '<C-o>'
 LSP_DECLARATION = 'gD'
 LSP_DEFINITION = 'gd'
 
+-- Dap config
+DAP_CONTINUE = '<F5>'
+DAP_STEP_OVER = '<F10>'
+DAP_STEP_INTO =	'<F11>'
+DAP_STEP_OUT = '<F12>'
+DAP_TOGGLE_BREAKPOINT = '<leader>b' 
+DAP_STEP_OVER_ALT = '<leader>dO'
+DAP_RUN_TO_CURSOR = '<leader>dC'
+DAP_REPL_TOGGLE = '<leader>dr'
+DAP_DOWN = '<leader>dj'
+DAP_UP = '<leader>dk'
+
 --Gitsigns
 --]h - next hunk
 --[h - prev hunk
@@ -153,15 +165,6 @@ SNIP_CUT = "sc"
 --
 --DAP
 --:JavaDapConfig - DAP is autoconfigured on start up, but in case you want to force configure it again, you can use this API
---Continue - 	F5
---Step over - F10 / <leader>d0
---Step into - F11
---Step out - 	F12
---breakpoint- <leader>b
---to_cursor - <leader>dC
---repl togg - <leader>dr
---stack down- <leader>dj
---stack up 	-	<leader>dk
 --
 --Test
 --:JavaTestRunCurrentClass - Run the test class in the active buffer
