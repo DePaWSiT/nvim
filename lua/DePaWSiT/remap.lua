@@ -50,6 +50,14 @@ DAP_REPL_TOGGLE = '<leader>dr'
 DAP_DOWN = '<leader>dj'
 DAP_UP = '<leader>dk'
 
+--Dap ui
+--edit - e
+--expand - <C-r>
+--open - o
+--remove - d
+--repl - r
+--toggle - t
+
 --Gitsigns
 --]h - next hunk
 --[h - prev hunk
