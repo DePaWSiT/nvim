@@ -3,6 +3,7 @@ return {
 	event = "BufRead",
 	config = function()
 		local dap = require "dap"
+		local mason_registry = require("mason-registry")
 		require('DePaWSiT.remap')
 
 		-- Keymaps for controlling the debugger
@@ -93,7 +94,7 @@ return {
 		dap.listeners.before['event_terminated']['easy-dotnet'] = function()
 			debug_dll = nil
 		end
-
+		
 		dap.adapters.coreclr = {
 			type = "executable",
 			command = "netcoredbg",

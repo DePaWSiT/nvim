@@ -26,6 +26,7 @@ dotnet tooling (terminal commands, requires sdk)
 - dotnet tool install -g dotnet-ef
 - dotnet tool install -g csharpier
 - (python required) pip install xmlformatter
+add netcoredbg to path, netcoredbg can be found in nvim-data/mason/packages/netcoredbg/netcoredbg\
 
 ## Lazy
 git
