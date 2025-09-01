@@ -1,6 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 RandomKeymap = "leaderText"
 
 --Funny motions
@@ -35,8 +33,14 @@ TOGGLE_KEY = '<C-n>'
 CYCLE_SIGNATURE = '<C-o>'
 
 --LSP-Config
-LSP_DECLARATION = 'gD'
-LSP_DEFINITION = 'gd'
+LSP_DECLARATION = 'grD'
+LSP_DEFINITION = 'grd'
+
+--omnisharp config (pain)
+OMNISHARP_REFERENCES = 'gor'
+OMNISHARP_DEFINITION = 'god'
+OMNISHARP_TYPE_DEFINITION = 'got'
+OMNISHARP_IMPLEMENTATION = 'goi'
 
 -- Dap config
 DAP_CONTINUE = '<F5>'

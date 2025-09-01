@@ -32,7 +32,10 @@ return {
 			{NVIM_TREE_TOGGLE, desc = "File Tree"},
 			{TOGGLE_KEY, desc = "Toggle LSP Signature", icon = {icon = "󱡴", color = "purple"}},
 			{CYCLE_SIGNATURE, desc = "Cycle LSP Signature", icon = {icon = "", color = "purple"}},
-			--{LSP_DECLARATION, desc = "Go To Declaration"},
+			{OMNISHARP_REFERENCES, desc = "reference Omnisharp"},
+			{OMNISHARP_DEFINITION, desc = "description Omnisharp"},
+			{OMNISHARP_TYPE_DEFINITION, desc = "Type Definition Omnisharp"},
+			{OMNISHARP_IMPLEMENTATION, desc = "Implementation Omnisharp"}
 		})
 	end,
 	opts = {

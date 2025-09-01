@@ -2,7 +2,7 @@ return {
 	"jay-babu/mason-nvim-dap.nvim",
 	event = "BufRead",
 	dependancies = {
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 	},
 	opts = {
 		ensure_installed = {

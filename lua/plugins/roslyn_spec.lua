@@ -1,6 +1,6 @@
 return {
 	"seblyng/roslyn.nvim",
-	ft = { "cs", "razor" },
+	ft = { "razor" },
 	dependencies = {
 		{
 			-- By loading as a dependencies, we ensure that we are available to set
@@ -10,7 +10,6 @@ return {
 		},
 	},
 	config = function()
-		local mason_registry = require("mason-registry")
 		local rzls_path = vim.fn.expand("$MASON/packages/rzls/libexec")
 		local cmd = {
 			"roslyn",
@@ -26,6 +25,7 @@ return {
 		vim.lsp.config("roslyn", {
 			cmd = cmd,
 			handlers = require("rzls.roslyn_handlers"),
+			filetypes = { "razor"},
 			settings = {
 				["csharp|completion"] = {
 					dotnet_show_completion_items_from_unimported_namespaces = true
