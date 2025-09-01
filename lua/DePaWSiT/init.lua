@@ -1,4 +1,3 @@
-require("DePaWSiT.remap")
 require("DePaWSiT.lazy")
 
 vim.cmd.set("relativenumber")

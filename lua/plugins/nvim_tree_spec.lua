@@ -1,6 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	keys = { "<leader>tt", "<cmd>require('nvim-tree.api').tree.toggle()<cr>" }, 
+	keys = { "<leader>tt", "<cmd>require('nvim-tree.api').tree.toggle()<cr>" },
 	opts = {
 		view = {
 			width = 42
@@ -24,7 +24,7 @@ return {
 			on_attach = my_on_attach
 		})
 		local api = require("nvim-tree.api")
-		require("DePaWSiT.remap")
-		vim.keymap.set("n", NVIM_TREE_TOGGLE, api.tree.toggle)
+		local map = require("DePaWSiT.remap")
+		vim.keymap.set("n", map.NVIM_TREE_TOGGLE, api.tree.toggle)
 	end
 }
