@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.maplocalleader = "\\"
+vim.g.mapleader = " "
 
 -- Setup lazy.nvim
 require("lazy").setup({
