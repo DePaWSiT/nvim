@@ -1,5 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	enabled = false,
 	keys = { "<leader>tt", "<cmd>require('nvim-tree.api').tree.toggle()<cr>" },
 	opts = {
 		view = {
@@ -25,6 +26,6 @@ return {
 		})
 		local api = require("nvim-tree.api")
 		local map = require("DePaWSiT.remap")
-		vim.keymap.set("n", map.NVIM_TREE_TOGGLE, api.tree.toggle)
+		vim.keymap.set("n", map.SNACKS_EXPLORER_TOGGLE, api.tree.toggle)
 	end
 }

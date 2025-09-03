@@ -3,8 +3,7 @@ RandomKeymap = "leaderText"
 --Funny motions
 --gc[1][2] - comments [1] number of lines in [2] direction
 local map = {
-	FUGITIVE_GIT_STATUS = '<leader>gs',
---Harpoon
+	--Harpoon
 	HARPOON_ADD_FILE = '<leader>ha',
 	HARPOON_TOGGLE_MENU = '<leader>hh',
 	HARPOON_NAV_NEXT = '<leader>]',
@@ -13,43 +12,78 @@ local map = {
 	HARPOON_NAV_2 = '<leader>h2',
 	HARPOON_NAV_3 = '<leader>h3',
 	HARPOON_NAV_4 = '<leader>h4',
---Telescope
-TELESCOPE_FIND_FILES = '<leader>fs',
-TELESCOPE_GIT_SEARCH = '<leader>gf',
-TELESCOPE_GREP_SEARCH = '<C-p>', --requires 'ripgrep' to be installed
---Undotree
-UNDOTREE_TOGGLE = '<leader>ut',
---Nvim-tree
-NVIM_TREE_TOGGLE = '<leader>tt',
---LSP-Signature
-TOGGLE_KEY = '<C-n>',
-CYCLE_SIGNATURE = '<C-o>',
---LSP-Config
-LSP_DECLARATION = 'grD',
-LSP_DEFINITION = 'grd',
---omnisharp config (pain)
-OMNISHARP_REFERENCES = 'gor',
-OMNISHARP_DEFINITION = 'god',
-OMNISHARP_TYPE_DEFINITION = 'got',
-OMNISHARP_IMPLEMENTATION = 'goi',
--- Dap config
-DAP_CONTINUE = '<F5>',
-DAP_STEP_OVER = '<F10>',
-DAP_STEP_INTO =	'<F11>',
-DAP_STEP_OUT = '<F12>',
-DAP_TOGGLE_BREAKPOINT = '<leader>b',
-DAP_STEP_OVER_ALT = '<leader>dO',
-DAP_RUN_TO_CURSOR = '<leader>dC',
-DAP_REPL_TOGGLE = '<leader>dr',
-DAP_DOWN = '<leader>dj',
-DAP_UP = '<leader>dk',
---Snip
-EXPAND = "<C-j>",
-EXPAND_OR_JUMP = "<C-l>",
-JUMP_NEXT = "<Tab>",
-JUMP_PREV = "<S-Tab>",
-SNIP_SELECT = "ss",
-SNIP_CUT = "sc",
+	--Undotree
+	UNDOTREE_TOGGLE = '<leader>ut',
+	--LSP-Signature
+	TOGGLE_KEY = '<C-n>',
+	CYCLE_SIGNATURE = '<C-o>',
+	--LSP-Config
+	LSP_DECLARATION = 'grD',
+	LSP_DEFINITION = 'grd',
+	-- Dap config
+	DAP_CONTINUE = '<F5>',
+	DAP_STEP_OVER = '<F10>',
+	DAP_STEP_INTO =	'<F11>',
+	DAP_STEP_OUT = '<F12>',
+	DAP_TOGGLE_BREAKPOINT = '<leader>b',
+	DAP_STEP_OVER_ALT = '<leader>dO',
+	DAP_RUN_TO_CURSOR = '<leader>dC',
+	DAP_REPL_TOGGLE = '<leader>dr',
+	DAP_DOWN = '<leader>dj',
+	DAP_UP = '<leader>dk',
+	--Snacks
+	SHOW_BUFFERS = '<leader>,',
+	SNACKS_GREP_SEARCH = '<leader>/',
+	SNACKS_COMMAND_HISTORY = '<leader>:',
+	SNACKS_NOTIFICATIONS = '<leader>n',
+	SNACKS_EXPLORER_TOGGLE = '<leader>e',
+	--find
+	SNACKS_FIND_FILES = '<leader>fs',
+	SNACKS_GIT_SEARCH = '<leader>gf',
+	SNACKS_PROJECTS = '<leader>fp',
+	SNACKS_RECENT = '<leader>fr',
+	--git
+	GIT_BRANCHES = '<leader>gb',
+	GIT_LOG = '<leader>gl',
+	GIT_LOG_LINE = '<leader>gL',
+	GIT_STATUS = '<leader>gs',
+	GIT_STASH = '<leader>gS',
+	GIT_DIFF = '<leader>gd',
+	GIT_LOG_FILE = '<leader>gf',
+	--grep
+	SNACKS_GREP_LINE = '<leader>sb',
+	SNACKS_GREP_BUFFER = '<leader>sB',
+	SNACKS_GREP_ALT = '<leader>sg',
+	SNACKS_GREP_WORD = '<leader>sw',
+	--search
+	SNACKS_REGISTERS = '<leader>s"',
+	SNACKS_HISTORY = '<leader>s/',
+	SNACKS_AUTOCMDS = '<leader>sa',
+	SNACKS_LINES = '<leader>sb',
+	SNACKS_COMMAND_HISTORY_ALT = '<leader>sc',
+	SNACKS_COMMANDS = '<leader>sC',
+	SNACKS_DIAGNOSTICS = '<leader>sd',
+	SNACKS_DIAGNOSTICS_BUFFER = '<leader>sD',
+	SNACKS_HELP = '<leader>sh',
+	SNACKS_HIGHLIGHTS = '<leader>sH',
+	SNACKS_ICONS = '<leader>si',
+	SNACKS_JUMPS = '<leader>sj',
+	SNACKS_KEYMAPS = '<leader>sk',
+	SNACKS_LOCATIONS = '<leader>sl',
+	SNACKS_MARKS = '<leader>sm',
+	SNACKS_MANUAL_PAGES = '<leader>sM',
+	SNACKS_LAZY = '<leader>sp',
+	SNACKS_QFLIST = '<leader>sq',
+	SNACKS_RESUME = '<leader>sR',
+	SNACKS_UNDO = '<leader>su',
+	SNACKS_COLORSCHEME = '<leader>uC',
+	--Snip
+	EXPAND = "<C-j>",
+	EXPAND_OR_JUMP = "<C-l>",
+	JUMP_NEXT = "<Tab>",
+	JUMP_PREV = "<S-Tab>",
+	SNIP_SELECT = "ss",
+	SNIP_CUT = "sc",
 }
 
 --Dap ui

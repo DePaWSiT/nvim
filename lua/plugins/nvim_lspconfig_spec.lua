@@ -4,6 +4,7 @@ return {
 	version = ">=2.0.0",
 	--has no setup so we skip the config
 	config = function()
+		local snacks = require('snacks')
 		--keymap for all lsp servers
 		vim.lsp.config("*", {
 			on_attach = function(client, bufnr)
@@ -16,19 +17,19 @@ return {
 				nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 				nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-				nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-				nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-				nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-				nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-				nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-				nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+				nmap('gd', function() snacks.picker.lsp_definition() end, '[G]oto [D]efinition')
+				nmap('gD', function() snacks.picker.lsp_declaration() end, '[G]oto [D]eclaration')
+				nmap('gr', function() snacks.picker.lsp_references() end, '[G]oto [R]eferences')
+				nmap('gI', function() snacks.picker.lsp_implementation() end, '[G]oto [I]mplementation')
+				nmap('gy', function() snacks.picker.lsp_type_definitions() end, 'Type [D]efinition')
+				nmap('<leader>ds', function() snacks.picker.lsp_symbols() end, '[D]ocument [S]ymbols')
+				nmap('<leader>ws', function() snacks.picker.lsp_worlspace_symbols() end, '[W]orkspace [S]ymbols')
 
 				-- See `:help K` for why this keymap
 				nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
 				nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
 				-- Lesser used LSP functionality
-				nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 				nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
 				nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
 				nmap('<leader>wl', function()

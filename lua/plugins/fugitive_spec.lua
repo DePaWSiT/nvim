@@ -1,6 +1,7 @@
 return {
 	"tpope/vim-fugitive",
 	event = "VeryLazy",
+	enabled = true,
 	dependancies = {"nvim-lua/plenary.nvim"},
 	config = function()
 		local Job = require("plenary.job")

@@ -28,6 +28,11 @@ dotnet tooling (terminal commands, requires sdk)
 - (python required) pip install xmlformatter
 add netcoredbg to path, netcoredbg can be found in nvim-data/mason/packages/netcoredbg/netcoredbg\
 
+## Lazygit
+you can check the installation page for it [here](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation)
+neovim-remote is required which is installed through pip
+- pip3 install neovim-remote
+
 ## Lazy
 git
 

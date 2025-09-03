@@ -3,6 +3,15 @@ return {
 	cmd = { "Trouble" },
 	opts = {
 		modes = {
+			test = {
+				mode = "diagnostics",
+				preview = {
+					type = "split",
+					relative = "win",
+					position = "right",
+					size = 0.4,
+				},
+			},
 			lsp = {
 				win = { position = "right" },
 			},

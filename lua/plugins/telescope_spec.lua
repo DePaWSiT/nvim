@@ -1,6 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.8",
+	enabled = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -13,8 +14,8 @@ return {
 	local map =	require('DePaWSiT.remap')
 		require('telescope').load_extension('harpoon')
 		local builtin = require('telescope.builtin')
-		vim.keymap.set('n', map.TELESCOPE_FIND_FILES, builtin.find_files, {})
-		vim.keymap.set('n', map.TELESCOPE_GIT_SEARCH, builtin.git_files, {})
+		vim.keymap.set('n', map.SNACKS_FIND_FILES, builtin.find_files, {})
+		vim.keymap.set('n', map.SNACK_GIT_SEARCH, builtin.git_files, {})
 		vim.keymap.set('n', map.TELESCOPE_GREP_SEARCH, function()
 			builtin.grep_string({search = vim.fn.input("grep > ")});
 		end)
