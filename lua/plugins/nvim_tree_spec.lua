@@ -1,7 +1,12 @@
 return {
 	"nvim-tree/nvim-tree.lua",
 	enabled = false,
-	keys = { "<leader>tt", "<cmd>require('nvim-tree.api').tree.toggle()<cr>" },
+	keys = function()
+		local map = require("DePaWSiT.remap")
+		return {
+			map.SNACKS_EXPLORER_TOGGLE, "<cmd>require('nvim-tree.api').tree.toggle()<cr>",
+		}
+	end,
 	opts = {
 		view = {
 			width = 42

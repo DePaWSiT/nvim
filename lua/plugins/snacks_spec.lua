@@ -49,8 +49,15 @@ return {
 			enabled = true,
 			line_length = 2000,
 		},
-		picker = {},
-		explorer = {},
+		picker = {
+			sources = {
+				explorer = {
+					watch = false,
+					--diagnostics = false,
+				}
+			}
+		},
+		explorer = {enabled = false},
 		input = { enabled = true },
 		notifier = { enabled = true },
 		quickfile = {
