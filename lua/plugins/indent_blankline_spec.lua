@@ -1,6 +1,14 @@
 return {
 	"lukas-reineke/indent-blankline.nvim",
-	event = "BufRead",
+	event = {"BufRead", "BufNewFile"},
 	main = "ibl",
-	opts = {},
+	config = function()
+		vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", {fg = "#7ba32a", nocombine = true})
+		require('ibl').setup({
+			scope = {
+				enabled = true,
+				highlight = "IndentBlanklineContextChar",
+			}
+		})
+	end,
 }

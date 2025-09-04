@@ -1,6 +1,7 @@
 return {
 	{
-		'tpope/vim-dadbod', lazy = true
+		'tpope/vim-dadbod',
+		lazy = true
 	},
 	{
 		'kristijanhusak/vim-dadbod-ui',

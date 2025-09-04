@@ -20,7 +20,7 @@ return {
 			on_start = function()
 				notify.info("Starting git fetch...", notif_opts)
 			end,
-			on_exit = function(j, return_val)
+			on_exit = function(_, return_val)
 				if return_val == 0 then
 					notify.notify("Git fetch completed", notif_opts)
 				else

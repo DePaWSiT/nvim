@@ -1,7 +1,7 @@
 return {
 	"GustavEikaas/easy-dotnet.nvim",
 	ft = { "cs", "rzls", "sln", "csproj" },
-	dependencies = { "nvim-lua/plenary.nvim", 'nvim-telescope/telescope.nvim', },
+	dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim", },
 	opts = {},
 	dev = false,
 }
