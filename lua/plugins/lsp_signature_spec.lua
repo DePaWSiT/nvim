@@ -4,9 +4,6 @@ return {
 	opts = function()
 		local map = require('DePaWSiT.remap')
 		return {
-			max_width = function()
-				return vim.api.nvim_win_get_width(0) * 0.5
-			end,
 			hint_enable = false,
 			hint_prefix = {
 				above = "↙ ",  -- when the hint is on the line above the current line

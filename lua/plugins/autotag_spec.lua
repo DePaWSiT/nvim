@@ -1,13 +1,15 @@
 return {
 	"windwp/nvim-ts-autotag",
 	ft = { "html", "xml" },
-	config = function()
-		require('nvim-ts-autotag').setup({
-			opts = {
+	opts = {
+		opts = {
 				enable_close = true,
 				enable_rename = true,
 				enable_close_on_slash = false,
-			},
-		})
-	end
+		},
+		per_filetype = {},
+		aliases = {
+			["xaml"] = "xml",
+		}
+	}
 }

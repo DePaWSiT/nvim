@@ -84,6 +84,10 @@ local map = {
 	JUMP_PREV = "<S-Tab>",
 	SNIP_SELECT = "ss",
 	SNIP_CUT = "sc",
+	--Mardown
+	MARKDOWN_TOGGLE = "<leader>mt",
+	MARKDOWN_PREVIEW = "<leader>mp",
+	MARKDOWN_STOP = "<leader>ms",
 }
 
 --Dap ui

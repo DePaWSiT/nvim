@@ -5,6 +5,8 @@ if you wanna go crazy, use :checkhealth and install as many warnings as you want
 ## Note
 when installing tools such as mingw-64 or winrar, do keep in mind that on windows, you need to manually set them in environment variables -> PATH
 
+the mason /bin folder must also be added to path as that is where all the executables are stored
+
 ## Nvim-ts-autotag
 requires the corresponding [parsers](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages) from treesitter to function
 
@@ -32,6 +34,9 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 (python required): ```pip install xmlformatter```\
 pip installs are by default added to global and to path (on windows at least)
 
+## Grug (search and replace)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)
+
 ## Lazy + Snacks
 - git
 - fd or (debian)fd-find
@@ -58,5 +63,3 @@ Unix
 - (Windows only): [mingw-64](https://www.mingw-w64.org/downloads)\
 - git
 
-## Telescope
-- [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)

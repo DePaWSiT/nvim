@@ -15,11 +15,11 @@ return {
 	opts = {
 		formatters_by_ft = {
 			cs = { "csharpier" },
-			xml = { "xmlformat" },  -- Works for both .xml and .xaml files
+			xml = { "xmlformat" }, -- Works for both .xml and .xaml files
 		},
 		format_on_save = {
 			lsp_fallback = true,
-			timeout_ms = 2000,  -- Increased timeout for larger files
+			timeout_ms = 2000, -- Increased timeout for larger files
 		},
 		formatters = {
 			csharpier = {

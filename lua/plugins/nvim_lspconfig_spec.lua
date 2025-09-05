@@ -21,7 +21,7 @@ return {
 				nmap('gD', function() snacks.picker.lsp_declaration() end, '[G]oto [D]eclaration')
 				nmap('gr', function() snacks.picker.lsp_references() end, '[G]oto [R]eferences')
 				nmap('gI', function() snacks.picker.lsp_implementation() end, '[G]oto [I]mplementation')
-				nmap('gy', function() snacks.picker.lsp_type_definitions() end, 'Type [D]efinition')
+				nmap('gy', function() snacks.picker.lsp_type_definitions() end, 'T[y]pe Definition')
 				nmap('<leader>ds', function() snacks.picker.lsp_symbols() end, '[D]ocument [S]ymbols')
 				nmap('<leader>ws', function() snacks.picker.lsp_worlspace_symbols() end, '[W]orkspace [S]ymbols')
 
@@ -38,10 +38,11 @@ return {
 
 				-- setup compiler config for omnisharp
 				if client and client.name == "omnisharp" then
-					nmap('gd', require('omnisharp_extended').lsp_definition, '[G]oto [D]efinition')
-					nmap('gr', require('omnisharp_extended').lsp_references, '[G]oto [R]eferences')
-					nmap('gI', require('omnisharp_extended').lsp_implementation, '[G]oto [I]mplementation')
-					nmap('<leader>D', require('omnisharp_extended').lsp_type_definition, 'Type [D]efinition')
+					local extended = require("omnisharp_extended")
+					nmap('gd', extended.lsp_definition, '[G]oto [D]efinition')
+					nmap('gr', extended.lsp_references, '[G]oto [R]eferences')
+					nmap('gI', extended.lsp_implementation, '[G]oto [I]mplementation')
+					nmap('gy', extended.lsp_type_definition, 'T[y]pe Definition')
 				end
 			end
 		})

@@ -3,7 +3,6 @@ return {
 	branch = "master",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require("nvim-treesitter.configs")
 		--List C compilers to use
 		require ('nvim-treesitter.install').compilers = { "gcc", "zig" }
 		require ('nvim-treesitter.configs').setup {
@@ -20,7 +19,7 @@ return {
 			highlight = { enable = true },
 			indent = {
 				enabled = true,
-				disable = { 'cs', 'xaml'}
+				disable = { 'cs' }
 			}
 		}
 	end
