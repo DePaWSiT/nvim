@@ -8,41 +8,42 @@ return {
 		--keymap for all lsp servers
 		vim.lsp.config("*", {
 			on_attach = function(client, bufnr)
+				local remap = require('DePaWSiT.remap')
 				local nmap = function(keys, func, desc)
 					if desc then
 						desc = "LSP: " .. desc
 					end
 					vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 				end
-				nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-				nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+				nmap(remap.LSP_RENAME, vim.lsp.buf.rename, '[R]e[n]ame')
+				nmap(remap.LSP_CODE_ACTION, vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-				nmap('gd', function() snacks.picker.lsp_definition() end, '[G]oto [D]efinition')
-				nmap('gD', function() snacks.picker.lsp_declaration() end, '[G]oto [D]eclaration')
-				nmap('gr', function() snacks.picker.lsp_references() end, '[G]oto [R]eferences')
-				nmap('gI', function() snacks.picker.lsp_implementation() end, '[G]oto [I]mplementation')
-				nmap('gy', function() snacks.picker.lsp_type_definitions() end, 'T[y]pe Definition')
-				nmap('<leader>ds', function() snacks.picker.lsp_symbols() end, '[D]ocument [S]ymbols')
-				nmap('<leader>ws', function() snacks.picker.lsp_worlspace_symbols() end, '[W]orkspace [S]ymbols')
+				nmap(remap.LSP_GOTO_DEFINITION, function() snacks.picker.lsp_definition() end, '[G]oto [D]efinition')
+				nmap(remap.LSP_GOTO_DECLARATION, function() snacks.picker.lsp_declaration() end, '[G]oto [D]eclaration')
+				nmap(remap.LSP_GOTO_REFERENCES, function() snacks.picker.lsp_references() end, '[G]oto [R]eferences')
+				nmap(remap.LSP_GOTO_IMPLEMENTATIONS, function() snacks.picker.lsp_implementation() end, '[G]oto [I]mplementation')
+				nmap(remap.LSP_TYPE_DEFINITION, function() snacks.picker.lsp_type_definitions() end, 'T[y]pe Definition')
+				nmap(remap.LSP_DOCUMENT_SYMBOLS, function() snacks.picker.lsp_symbols() end, '[D]ocument [S]ymbols')
+				nmap(remap.LSP_WORKSPACE_SYMBOLS, function() snacks.picker.lsp_worlspace_symbols() end, '[W]orkspace [S]ymbols')
 
 				-- See `:help K` for why this keymap
-				nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-				nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+				nmap(remap.LSP_HOVER_DOC, vim.lsp.buf.hover, 'Hover Documentation')
+				nmap(remap.LSP_SIGNATURE_HELP, vim.lsp.buf.signature_help, 'Signature Documentation')
 
 				-- Lesser used LSP functionality
-				nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-				nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-				nmap('<leader>wl', function()
+				nmap(remap.LSP_WORKSPACE_ADD_FOLDER, vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
+				nmap(remap.LSP_WORKSPACE_REMOVE_FOLDER, vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
+				nmap(remap.LSP_WORKPLACE_LIST_FOLDERS, function()
 					print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 				end, '[W]orkspace [L]ist Folders')
 
 				-- setup compiler config for omnisharp
 				if client and client.name == "omnisharp" then
 					local extended = require("omnisharp_extended")
-					nmap('gd', extended.lsp_definition, '[G]oto [D]efinition')
-					nmap('gr', extended.lsp_references, '[G]oto [R]eferences')
-					nmap('gI', extended.lsp_implementation, '[G]oto [I]mplementation')
-					nmap('gy', extended.lsp_type_definition, 'T[y]pe Definition')
+					nmap(remap.LSP_GOTO_DEFINITION, extended.lsp_definition, '[G]oto [D]efinition')
+					nmap(remap.LSP_GOTO_REFERENCES, extended.lsp_references, '[G]oto [R]eferences')
+					nmap(remap.LSP_GOTO_IMPLEMENTATIONS, extended.lsp_implementation, '[G]oto [I]mplementation')
+					nmap(remap.LSP_TYPE_DEFINITION, extended.lsp_type_definition, 'T[y]pe Definition')
 				end
 			end
 		})
