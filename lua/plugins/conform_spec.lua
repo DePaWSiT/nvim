@@ -1,6 +1,6 @@
 return {
 	'stevearc/conform.nvim',
-	event = { "BufWritePre" },
+	event = { "BufWritePre", "BufNewFile" },
 	cmd = { "ConformInfo" },
 	keys = function()
 		local remap = require('DePaWSiT.remap')
@@ -45,12 +45,12 @@ return {
 			},
 			prettier = {
 				command = "prettier",
-				args = { [[--tab-width ]]..vim.o.tabstop,},
+				args = { [[--tab-width ]] .. vim.o.tabstop, },
 				stdin = true,
 			},
 			stylua = {
 				command = "stylua",
-				args = { [[--indent-width ]]..vim.o.tabstop,},
+				args = { [[--indent-width ]] .. vim.o.tabstop, },
 				stdin = true,
 			},
 		},
