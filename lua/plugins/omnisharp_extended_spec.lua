@@ -1,6 +1,6 @@
 return {
 	"hoffs/omnisharp-extended-lsp.nvim",
-	--event = "BufRead",
-	lazy = true,
-	opts = {},
+	ft = { "cs" },
+	config = function()
+	end,
 }
