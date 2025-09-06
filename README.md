@@ -13,10 +13,16 @@ requires the corresponding [parsers](https://github.com/nvim-treesitter/nvim-tre
 ## Blink
 check the font of the terminal, needs to be a [patched nerd font](https://www.nerdfonts.com/font-downloads) (no mono)
 
+## Conform
+different formatters for different filetypes
+```pip install xmlformatter```\
+```:MasonInstall stylua```\
+```:MasonInstall prettier```
+
 ## Dadbod + Dotenv
 nothing here to install,
 [use env to keep connection](https://github.com/kristijanhusak/vim-dadbod-ui)\
-```:Dotnet``` verbose to see what is in the env
+```:Dotenv``` to see what is in the env
 
 ## Easy-dotnet
 ```:MasonInstall rzls```\
@@ -31,17 +37,14 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 ```dotnet tool install -g dotnet-outdated-tool```\
 ```dotnet tool install -g dotnet-ef```\
 ```dotnet tool install -g csharpier```\
-(python required): ```pip install xmlformatter```\
-pip installs are by default added to global and to path (on windows at least)
 
 ## Grug (search and replace)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)
 
 ## Java
-```:MasonInstall jdtls```
-```:MasonInstall java-test```
+```:MasonInstall jdtls```\
+```:MasonInstall java-test```\
 ```:MasonInstall java-debug-adapter```
-```:MasonInstall ```
 
 ## Lazy + Snacks
 - git
@@ -53,7 +56,7 @@ pip installs are by default added to global and to path (on windows at least)
 ```:MasonInstall jq```\
 ```:MasonInstall lua-language-server```\
 ```:MasonInstall bash-language-server```\
-```:MasonInstall pyright```\
+```:MasonInstall pyright```
 
 ### Adding a lsp
 Assuming that mason/bin is in PATH
