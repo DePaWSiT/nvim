@@ -20,6 +20,8 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.maplocalleader = "\\"
 vim.g.mapleader = " "
+vim.opt.tabstop=2
+vim.opt.shiftwidth=2
 
 -- Setup lazy.nvim
 require("lazy").setup({
