@@ -8,7 +8,7 @@ return {
 			{
 				remap.FORMAT_FILE,
 				function()
-					require("conform").format({ async = true, lsp_fallback = true })
+					require("conform").format()
 				end,
 				mode = "",
 				desc = "Format buffer",
@@ -25,18 +25,21 @@ return {
 			typescript = { "prettier" },
 			json = { "prettier" },
 			scss = { "prettier" },
-			markdown = { "prettier" },
+			md = { "prettier" },
 			lua = { "stylua" }
 		},
-		format_on_save = {
+		default_format_opts = {
 			lsp_format = "fallback",
+		},
+		format_on_save = {
 			timeout_ms = 2000, -- Increased timeout for larger files
 		},
 		formatters = {
 			csharpier = {
 				command = "csharpier",
 				args = { "--write-stdout" },
-				stdin = true,
+				stdin = false,
+				require_cwd = false,
 			},
 			xmlformat = {
 				command = "xmlformat",

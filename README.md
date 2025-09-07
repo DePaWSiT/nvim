@@ -15,9 +15,10 @@ check the font of the terminal, needs to be a [patched nerd font](https://www.ne
 
 ## Conform
 different formatters for different filetypes
-```pip install xmlformatter```\
+```:MasonInstall xmlformatter```\
 ```:MasonInstall stylua```\
-```:MasonInstall prettier```
+```:MasonInstall prettier```\
+```:MasonInstall csharpier```
 
 ## Dadbod + Dotenv
 nothing here to install,
@@ -36,7 +37,6 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 ```dotnet tool install -g EasyDotnet```\
 ```dotnet tool install -g dotnet-outdated-tool```\
 ```dotnet tool install -g dotnet-ef```\
-```dotnet tool install -g csharpier```\
 
 ## Grug (search and replace)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)
