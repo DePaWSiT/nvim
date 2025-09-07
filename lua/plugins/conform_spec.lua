@@ -1,21 +1,22 @@
 return {
-	'stevearc/conform.nvim',
-	event = { "BufWritePre", "BufNewFile" },
+	"stevearc/conform.nvim",
+	event = "VeryLazy",
 	cmd = { "ConformInfo" },
 	keys = function()
-		local remap = require('DePaWSiT.remap')
+		local remap = require("DePaWSiT.remap")
 		return {
 			{
 				remap.FORMAT_FILE,
 				function()
-					require("conform").format()
+					require("conform").format({ async = true })
 				end,
-				mode = "",
+				mode = "n",
 				desc = "Format buffer",
 			},
 		}
 	end,
 	opts = {
+		log_level = vim.log.levels.DEBUG,
 		formatters_by_ft = {
 			cs = { "csharpier" },
 			xml = { "xmlformat" }, -- Works for both .xml and .xaml files
@@ -26,20 +27,21 @@ return {
 			json = { "prettier" },
 			scss = { "prettier" },
 			md = { "prettier" },
-			lua = { "stylua" }
+			lua = { "stylua" },
+		},
+		format_on_save = {
+			-- I recommend these options. See :help conform.format for details.
+			lsp_format = "fallback",
+			timeout_ms = 500,
 		},
 		default_format_opts = {
 			lsp_format = "fallback",
 		},
-		format_on_save = {
-			timeout_ms = 2000, -- Increased timeout for larger files
-		},
 		formatters = {
 			csharpier = {
 				command = "csharpier",
-				args = { "--write-stdout" },
-				stdin = false,
-				require_cwd = false,
+				args = { "format", "$FILENAME", "--write-stdout" },
+				stdin = true,
 			},
 			xmlformat = {
 				command = "xmlformat",
@@ -48,17 +50,18 @@ return {
 			},
 			prettier = {
 				command = "prettier",
-				args = { [[--tab-width ]] .. vim.o.tabstop, },
+				args = { "$FILENAME" },
 				stdin = true,
 			},
 			stylua = {
 				command = "stylua",
-				args = { [[--indent-width ]] .. vim.o.tabstop, },
+				args = { "--indent-width", "2", "$FILENAME" },
 				stdin = true,
 			},
 		},
 	},
-	config = function()
+	config = function(_, opts)
+		require("conform").setup(opts)
 		vim.filetype.add({
 			extension = {
 				xaml = "xml",
