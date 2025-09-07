@@ -18,6 +18,7 @@ different formatters for different filetypes
 ```:MasonInstall xmlformatter```\
 ```:MasonInstall stylua```\
 ```:MasonInstall prettier```\
+```:MasonInstall jq```\
 ```:MasonInstall csharpier```
 
 ## Dadbod + Dotenv
@@ -27,11 +28,7 @@ nothing here to install,
 
 ## Easy-dotnet
 ```:MasonInstall rzls```\
-```:MasonInstall jq```\
-```:MasonInstall netcoredbg```\
 ```:MasonInstall roslyn```\
-```:MasonInstall omnisharp```\
-(Optional) ```:MasonInstall omnisharp-mono```\
 dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft.com/downloads/))
 ### dotnet tooling (terminal commands, requires sdk)
 ```dotnet tool install -g EasyDotnet```\
@@ -41,29 +38,18 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 ## Grug (search and replace)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)
 
-## Java
-```:MasonInstall jdtls```\
-```:MasonInstall java-test```\
-```:MasonInstall java-debug-adapter```
-
 ## Lazy + Snacks
 - git
 - fd or (debian)fd-find
 
-## LSP (and how to add one)
-### Random required lsps
-```:MasonInstall html-lsp``` something needed it but forgot...\
-```:MasonInstall jq```\
-```:MasonInstall lua-language-server```\
-```:MasonInstall bash-language-server```\
-```:MasonInstall pyright```
 
-### Adding a lsp
+## Adding a lsp
 Assuming that mason/bin is in PATH
 1. Get the lsp through mason
 2. Add the lsp to the list of servers in nvim_lspconfig_spec.lua
   - for adding the correct name of the lsp, see the [config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)\
-3. (optional) Configure the lsp if needed
+3. Add to either mason_lspconfig or mason_dap
+4. (optional) Configure the lsp if needed
 
 ## Mason
 - [python](https://www.python.org/downloads)

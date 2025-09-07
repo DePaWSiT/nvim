@@ -1,6 +1,6 @@
 return {
 	"jay-babu/mason-nvim-dap.nvim",
-	event = "BufRead",
+	event = "VeryLazy",
 	dependancies = {
 		"mason-org/mason.nvim",
 	},
@@ -11,8 +11,8 @@ return {
 			"javatest",
 		}
 	},
-	config = function()
+	config = function(_, opts)
 		require("mason").setup()
-		require("mason-nvim-dap").setup()
+		require("mason-nvim-dap").setup(opts)
 	end,
 }

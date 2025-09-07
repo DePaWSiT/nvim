@@ -1,9 +1,8 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
 	event = "VeryLazy",
-	enabled = false,
 	dependencies = {
-		{ "mason-org/mason.nvim", opts = {}},
+		{ "mason-org/mason.nvim", opts = {} },
 		"neovim/nvim-lspconfig",
 	},
 	opts = {
@@ -11,10 +10,14 @@ return {
 			"lua_ls",
 			"bashls",
 			"pyright",
-			"roslyn",
-			"rzls",
 			"html",
 			"omnisharp",
+			"omnisharp_mono",
+			"jdtls",
 		},
+		automatic_enable = false, --config is done in lsp_config_spec.lua
 	},
+	config = function(_, opts)
+		require("mason-lspconfig").setup(opts)
+	end,
 }
