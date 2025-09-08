@@ -23,9 +23,9 @@ return {
     vim.keymap.set("n", map.DAP_UP, dap.up, { desc = "Go up stack frame" })
 
     -- .NET specific setup using `easy-dotnet`
-    vim.loader.enable(false)
+    --vim.loader.enable(false)
     require("easy-dotnet.netcoredbg").register_dap_variables_viewer() -- special variables viewer specific for .NET
-    vim.loader.enable(true)
+    --vim.loader.enable(true)
     local dotnet = require("easy-dotnet")
     local debug_dll = nil
 
@@ -96,7 +96,7 @@ return {
 
     dap.adapters.coreclr = {
       type = "executable",
-      command = "netcoredbg",
+      command = "netcoredbg.exe",
       args = { "--interpreter=vscode" },
     }
   end,

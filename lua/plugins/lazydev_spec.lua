@@ -9,4 +9,7 @@ return {
       "nvim-dap-ui",
     },
   },
+  config = function(_, opts)
+    require("lazydev").setup(opts)
+  end,
 }

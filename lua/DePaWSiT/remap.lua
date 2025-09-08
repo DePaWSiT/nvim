@@ -51,7 +51,7 @@ local map = {
   SHOW_BUFFERS = "<leader>,",
   SNACKS_GREP_SEARCH = "<leader>/",
   SNACKS_COMMAND_HISTORY = "<leader>:",
-  SNACKS_NOTIFICATIONS = "<leader>n",
+  SNACKS_NOTIFICATIONS_HISTORY = "<leader>n",
   SNACKS_EXPLORER_TOGGLE = "<leader>e",
   --find
   SNACKS_FIND_FILES = "<leader>fs",
