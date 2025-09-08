@@ -3,121 +3,121 @@ RandomKeymap = "leaderText"
 --Funny motions
 --gc[1][2] - comments [1] number of lines in [2] direction
 local map = {
-	--Conform
-	FORMAT_FILE = '<leader>fi',
-	--Harpoon
-	HARPOON_ADD_FILE = '<leader>ha',
-	HARPOON_TOGGLE_MENU = '<leader>hh',
-	HARPOON_NAV_NEXT = '<leader>]',
-	HARPOON_NAV_PREV = '<leader>[',
-	HARPOON_NAV_1 = '<leader>h1',
-	HARPOON_NAV_2 = '<leader>h2',
-	HARPOON_NAV_3 = '<leader>h3',
-	HARPOON_NAV_4 = '<leader>h4',
-	--Undotree
-	UNDOTREE_TOGGLE = '<leader>ut',
-	--LSP-Signature
-	TOGGLE_KEY = '<C-n>',
-	CYCLE_SIGNATURE = '<C-o>',
-	--LSP-Config
-	LSP_RENAME = '<leader>rn',
-	LSP_CODE_ACTION = '<leader>ca',
-	LSP_GOTO_DEFINITION = 'gd',
-	LSP_GOTO_DECLARATION = 'gD',
-	LSP_GOTO_REFERENCES = 'gr',
-	LSP_GOTO_IMPLEMENTATIONS = 'gI',
-	LSP_TYPE_DEFINITION = 'gy',
-	LSP_DOCUMENT_SYMBOLS = '<leader>ds',
-	LSP_WORKSPACE_SYMBOLS = '<leader>ws',
-	LSP_HOVER_DOC = 'K',
-	LSP_SIGNATURE_HELP = '<C-k>',
-	LSP_WORKSPACE_ADD_FOLDER = '<leader>wa',
-	LSP_WORKSPACE_REMOVE_FOLDER = '<leader>wr',
-	LSP_WORKPLACE_LIST_FOLDERS = '<leader>wl',
-	--Grug
-	OPEN_GRUG = '<leader>sr',
-	-- Dap config
-	DAP_CONTINUE = '<F5>',
-	DAP_STEP_OVER = '<F10>',
-	DAP_STEP_INTO =	'<F11>',
-	DAP_STEP_OUT = '<F12>',
-	DAP_TOGGLE_BREAKPOINT = '<leader>b',
-	DAP_STEP_OVER_ALT = '<leader>dO',
-	DAP_RUN_TO_CURSOR = '<leader>dC',
-	DAP_REPL_TOGGLE = '<leader>dr',
-	DAP_DOWN = '<leader>dj',
-	DAP_UP = '<leader>dk',
-	--Snacks
-	SHOW_BUFFERS = '<leader>,',
-	SNACKS_GREP_SEARCH = '<leader>/',
-	SNACKS_COMMAND_HISTORY = '<leader>:',
-	SNACKS_NOTIFICATIONS = '<leader>n',
-	SNACKS_EXPLORER_TOGGLE = '<leader>e',
-	--find
-	SNACKS_FIND_FILES = '<leader>fs',
-	SNACKS_GIT_SEARCH = '<leader>gf',
-	SNACKS_PROJECTS = '<leader>fp',
-	SNACKS_RECENT = '<leader>fr',
-	--git
-	GIT_BRANCHES = '<leader>gb',
-	GIT_LOG = '<leader>gl',
-	GIT_LOG_LINE = '<leader>gL',
-	GIT_STATUS = '<leader>gs',
-	GIT_STASH = '<leader>gS',
-	GIT_DIFF = '<leader>gd',
-	GIT_LOG_FILE = '<leader>gf',
-	GIT_NEXT_HUNK = ']h',
-	GIT_PREV_HUNK = '[h',
-	GIT_LAST_HUNK = '[H',
-	GIT_FIRST_HUNK = ']H',
-	GIT_STAGE_HUNK = '<leader>ghs',
-	GIT_RESET_HUNK = '<leader>ghr',
-	GIT_STAGE_BUFFER = '<leader>ghS',
-	GIT_UNDO_STAGE_HUNK = '<leader>ghu',
-	GIT_RESET_BUFFER = '<leader>ghR',
-	GIT_PREVIEW_HUNK = '<leader>ghp',
-	GIT_BLAME_LINE = '<leader>ghb',
-	GIT_BLAME_BUFFER = '<leader>ghB',
-	GIT_DIFF_THIS = '<leader>ghd',
-	GIT_DIFF_SPECIAL = '<leader>ghD',
-	--grep
-	SNACKS_GREP_LINE = '<leader>sb',
-	SNACKS_GREP_BUFFER = '<leader>sB',
-	SNACKS_GREP_ALT = '<leader>sg',
-	SNACKS_GREP_WORD = '<leader>sw',
-	--search
-	SNACKS_REGISTERS = '<leader>s"',
-	SNACKS_HISTORY = '<leader>s/',
-	SNACKS_AUTOCMDS = '<leader>sa',
-	SNACKS_LINES = '<leader>sb',
-	SNACKS_COMMAND_HISTORY_ALT = '<leader>sc',
-	SNACKS_COMMANDS = '<leader>sC',
-	SNACKS_DIAGNOSTICS = '<leader>sd',
-	SNACKS_DIAGNOSTICS_BUFFER = '<leader>sD',
-	SNACKS_HELP = '<leader>sh',
-	SNACKS_HIGHLIGHTS = '<leader>sH',
-	SNACKS_ICONS = '<leader>si',
-	SNACKS_JUMPS = '<leader>sj',
-	SNACKS_KEYMAPS = '<leader>sk',
-	SNACKS_LOCATIONS = '<leader>sl',
-	SNACKS_MARKS = '<leader>sm',
-	SNACKS_MANUAL_PAGES = '<leader>sM',
-	SNACKS_LAZY = '<leader>sp',
-	SNACKS_QFLIST = '<leader>sq',
-	SNACKS_RESUME = '<leader>sR',
-	SNACKS_UNDO = '<leader>su',
-	SNACKS_COLORSCHEME = '<leader>uC',
-	--Snip
-	EXPAND = "<C-j>",
-	EXPAND_OR_JUMP = "<C-l>",
-	JUMP_NEXT = "<Tab>",
-	JUMP_PREV = "<S-Tab>",
-	SNIP_SELECT = "ss",
-	SNIP_CUT = "sc",
-	--Mardown
-	MARKDOWN_TOGGLE = "<leader>mt",
-	MARKDOWN_PREVIEW = "<leader>mp",
-	MARKDOWN_STOP = "<leader>ms",
+  --Conform
+  FORMAT_FILE = "<leader>fi",
+  --Harpoon
+  HARPOON_ADD_FILE = "<leader>ha",
+  HARPOON_TOGGLE_MENU = "<leader>hh",
+  HARPOON_NAV_NEXT = "<leader>]",
+  HARPOON_NAV_PREV = "<leader>[",
+  HARPOON_NAV_1 = "<leader>h1",
+  HARPOON_NAV_2 = "<leader>h2",
+  HARPOON_NAV_3 = "<leader>h3",
+  HARPOON_NAV_4 = "<leader>h4",
+  --Undotree
+  UNDOTREE_TOGGLE = "<leader>ut",
+  --LSP-Signature
+  TOGGLE_KEY = "<C-n>",
+  CYCLE_SIGNATURE = "<C-o>",
+  --LSP-Config
+  LSP_RENAME = "<leader>rn",
+  LSP_CODE_ACTION = "<leader>ca",
+  LSP_GOTO_DEFINITION = "gd",
+  LSP_GOTO_DECLARATION = "gD",
+  LSP_GOTO_REFERENCES = "gr",
+  LSP_GOTO_IMPLEMENTATIONS = "gI",
+  LSP_TYPE_DEFINITION = "gy",
+  LSP_DOCUMENT_SYMBOLS = "<leader>ds",
+  LSP_WORKSPACE_SYMBOLS = "<leader>ws",
+  LSP_HOVER_DOC = "K",
+  LSP_SIGNATURE_HELP = "<C-k>",
+  LSP_WORKSPACE_ADD_FOLDER = "<leader>wa",
+  LSP_WORKSPACE_REMOVE_FOLDER = "<leader>wr",
+  LSP_WORKPLACE_LIST_FOLDERS = "<leader>wl",
+  --Grug
+  OPEN_GRUG = "<leader>sr",
+  -- Dap config
+  DAP_CONTINUE = "<F5>",
+  DAP_STEP_OVER = "<F10>",
+  DAP_STEP_INTO = "<F11>",
+  DAP_STEP_OUT = "<F12>",
+  DAP_TOGGLE_BREAKPOINT = "<leader>b",
+  DAP_STEP_OVER_ALT = "<leader>dO",
+  DAP_RUN_TO_CURSOR = "<leader>dC",
+  DAP_REPL_TOGGLE = "<leader>dr",
+  DAP_DOWN = "<leader>dj",
+  DAP_UP = "<leader>dk",
+  --Snacks
+  SHOW_BUFFERS = "<leader>,",
+  SNACKS_GREP_SEARCH = "<leader>/",
+  SNACKS_COMMAND_HISTORY = "<leader>:",
+  SNACKS_NOTIFICATIONS = "<leader>n",
+  SNACKS_EXPLORER_TOGGLE = "<leader>e",
+  --find
+  SNACKS_FIND_FILES = "<leader>fs",
+  SNACKS_GIT_SEARCH = "<leader>gf",
+  SNACKS_PROJECTS = "<leader>fp",
+  SNACKS_RECENT = "<leader>fr",
+  --git
+  GIT_BRANCHES = "<leader>gb",
+  GIT_LOG = "<leader>gl",
+  GIT_LOG_LINE = "<leader>gL",
+  GIT_STATUS = "<leader>gs",
+  GIT_STASH = "<leader>gS",
+  GIT_DIFF = "<leader>gd",
+  GIT_LOG_FILE = "<leader>gf",
+  GIT_NEXT_HUNK = "]h",
+  GIT_PREV_HUNK = "[h",
+  GIT_LAST_HUNK = "[H",
+  GIT_FIRST_HUNK = "]H",
+  GIT_STAGE_HUNK = "<leader>ghs",
+  GIT_RESET_HUNK = "<leader>ghr",
+  GIT_STAGE_BUFFER = "<leader>ghS",
+  GIT_UNDO_STAGE_HUNK = "<leader>ghu",
+  GIT_RESET_BUFFER = "<leader>ghR",
+  GIT_PREVIEW_HUNK = "<leader>ghp",
+  GIT_BLAME_LINE = "<leader>ghb",
+  GIT_BLAME_BUFFER = "<leader>ghB",
+  GIT_DIFF_THIS = "<leader>ghd",
+  GIT_DIFF_SPECIAL = "<leader>ghD",
+  --grep
+  SNACKS_GREP_LINE = "<leader>sb",
+  SNACKS_GREP_BUFFER = "<leader>sB",
+  SNACKS_GREP_ALT = "<leader>sg",
+  SNACKS_GREP_WORD = "<leader>sw",
+  --search
+  SNACKS_REGISTERS = '<leader>s"',
+  SNACKS_HISTORY = "<leader>s/",
+  SNACKS_AUTOCMDS = "<leader>sa",
+  SNACKS_LINES = "<leader>sb",
+  SNACKS_COMMAND_HISTORY_ALT = "<leader>sc",
+  SNACKS_COMMANDS = "<leader>sC",
+  SNACKS_DIAGNOSTICS = "<leader>sd",
+  SNACKS_DIAGNOSTICS_BUFFER = "<leader>sD",
+  SNACKS_HELP = "<leader>sh",
+  SNACKS_HIGHLIGHTS = "<leader>sH",
+  SNACKS_ICONS = "<leader>si",
+  SNACKS_JUMPS = "<leader>sj",
+  SNACKS_KEYMAPS = "<leader>sk",
+  SNACKS_LOCATIONS = "<leader>sl",
+  SNACKS_MARKS = "<leader>sm",
+  SNACKS_MANUAL_PAGES = "<leader>sM",
+  SNACKS_LAZY = "<leader>sp",
+  SNACKS_QFLIST = "<leader>sq",
+  SNACKS_RESUME = "<leader>sR",
+  SNACKS_UNDO = "<leader>su",
+  SNACKS_COLORSCHEME = "<leader>uC",
+  --Snip
+  EXPAND = "<C-j>",
+  EXPAND_OR_JUMP = "<C-l>",
+  JUMP_NEXT = "<Tab>",
+  JUMP_PREV = "<S-Tab>",
+  SNIP_SELECT = "ss",
+  SNIP_CUT = "sc",
+  --Mardown
+  MARKDOWN_TOGGLE = "<leader>mt",
+  MARKDOWN_PREVIEW = "<leader>mp",
+  MARKDOWN_STOP = "<leader>ms",
 }
 
 --Dap ui
@@ -143,7 +143,7 @@ local map = {
 --<leader>ghD - diff this ~
 --
 --GRUG Search and Replace
---SEARCH_AND_REPLACE = '<leader>sr' 
+--SEARCH_AND_REPLACE = '<leader>sr'
 --
 --Trouble lsp info
 --<leader>xx - diagnostic toggle
@@ -259,5 +259,5 @@ local map = {
 		--DB-MANAGEMENT
 		--:DBUI - Opening the ui for dadbod-ui
 		-- ]==]
-		--
-		return map
+--
+return map

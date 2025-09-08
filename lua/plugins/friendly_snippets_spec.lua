@@ -1,4 +1,4 @@
 return {
-	"rafamadriz/friendly-snippets",
-	event = "BufRead",
+  "rafamadriz/friendly-snippets",
+  event = "BufRead",
 }

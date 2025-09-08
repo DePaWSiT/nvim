@@ -18,7 +18,7 @@ return {
       changedelete = { text = "▎" },
     },
     on_attach = function(buffer)
-			local remap = require('DePaWSiT.remap')
+      local remap = require("DePaWSiT.remap")
       local gs = package.loaded.gitsigns
 
       local function map(mode, l, r, desc)

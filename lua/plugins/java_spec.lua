@@ -1,5 +1,5 @@
 return {
-	"nvim-java/nvim-java",
-	ft = { "java" },
-	opts = {},
+  "nvim-java/nvim-java",
+  ft = { "java" },
+  opts = {},
 }
