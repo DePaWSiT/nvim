@@ -8,7 +8,8 @@ return {
 			{
 				remap.FORMAT_FILE,
 				function()
-					require("conform").format({ async = true })
+					require("conform").format({ async = false })
+					vim.cmd("write")
 				end,
 				mode = "n",
 				desc = "Format buffer",
@@ -30,9 +31,8 @@ return {
 			lua = { "stylua" },
 		},
 		format_on_save = {
-			-- I recommend these options. See :help conform.format for details.
+			timeout = 2000,
 			lsp_format = "fallback",
-			timeout_ms = 500,
 		},
 		default_format_opts = {
 			lsp_format = "fallback",
@@ -40,7 +40,7 @@ return {
 		formatters = {
 			csharpier = {
 				command = "csharpier",
-				args = { "format", "$FILENAME", "--write-stdout" },
+				args = { "format", "--stdin-path", "$FILENAME", "--write-stdout" },
 				stdin = true,
 			},
 			xmlformat = {
