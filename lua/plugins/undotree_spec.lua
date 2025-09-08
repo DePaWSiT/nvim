@@ -3,6 +3,6 @@ return {
   event = "VeryLazy",
   config = function()
     local map = require("DePaWSiT.remap")
-    vim.keymap.set("n", map.UNDOTREE_TOGGLE, vim.cmd.undotreeToggle)
+    vim.keymap.set("n", map.UNDOTREE_TOGGLE, vim.cmd.UndotreeToggle)
   end,
 }

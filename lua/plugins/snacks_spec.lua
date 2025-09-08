@@ -58,7 +58,7 @@ return {
         desc = "Command History",
       },
       {
-        map.SNACKS_NOTIFICATIONS,
+        map.SNACKS_NOTIFICATIONS_HISTORY,
         function()
           Snacks.picker.notifications()
         end,
