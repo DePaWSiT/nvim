@@ -3,7 +3,9 @@ return {
   event = { "BufRead", "BufNewFile" },
   config = function()
     local dap = require("dap")
+    local dotnet = require("easy-dotnet")
     local map = require("DePaWSiT.remap")
+    dap.set_log_level("TRACE")
 
     -- Keymaps for controlling the debugger
     vim.keymap.set("n", "q", function()
@@ -26,7 +28,6 @@ return {
     --vim.loader.enable(false)
     require("easy-dotnet.netcoredbg").register_dap_variables_viewer() -- special variables viewer specific for .NET
     --vim.loader.enable(true)
-    local dotnet = require("easy-dotnet")
     local debug_dll = nil
 
     local function ensure_dll()
@@ -36,6 +37,11 @@ return {
       local dll = dotnet.get_debug_dll(true)
       debug_dll = dll
       return dll
+    end
+
+    local function file_exists(path)
+      local stat = vim.loop.fs_stat(path)
+      return stat and stat.type == "file"
     end
 
     local function rebuild_dotnet_project(co, path)
@@ -63,13 +69,16 @@ return {
           request = "launch",
           env = function()
             local dll = ensure_dll()
-            local vars = dotnet.get_environment_variables(dll.project_name, dll.relative_project_path)
+            local vars = dotnet.get_environment_variables(dll.project_name, dll.relative_project_path, false)
             return vars or nil
           end,
           program = function()
             local dll = ensure_dll()
             local co = coroutine.running()
             rebuild_dotnet_project(co, dll.project_path)
+            if not file_exists(dll.target_path) then
+              error("Project has not been built, path: " .. dll.target_path)
+            end
             return dll.relative_dll_path
           end,
           cwd = function()
