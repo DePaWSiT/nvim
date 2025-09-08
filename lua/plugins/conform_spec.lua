@@ -50,7 +50,7 @@ return {
 			},
 			prettier = {
 				command = "prettier",
-				args = { "$FILENAME" },
+				args = { "$FILENAME", "--write", "--log-level", "silent" },
 				stdin = true,
 			},
 			stylua = {
