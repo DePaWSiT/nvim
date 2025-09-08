@@ -1,11 +1,11 @@
 return {
   {
     "hrsh7th/vim-vsnip-integ",
-    event = "BufRead",
+    event = { "BufRead", "BufNewFile" },
   },
   {
     "hrsh7th/vim-vsnip",
-    event = "BufRead",
+    event = { "BufRead", "BufNewFile" },
     config = function()
       local map = require("DePaWSiT.remap")
       -- Helper for mapping with expr and silent

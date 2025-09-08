@@ -55,7 +55,7 @@ return {
       },
       stylua = {
         command = "stylua",
-        args = { "--indent-width", "2", "--indent-type", "spaces", "-" },
+        args = { "-" },
         stdin = true,
       },
     },

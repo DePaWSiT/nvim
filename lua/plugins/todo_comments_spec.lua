@@ -1,15 +1,16 @@
 return {
   "folke/todo-comments.nvim",
   cmd = { "TodoTrouble", "TodoTelescope" },
-  event = "BufRead",
+  event = { "BufRead", "BufNewFile" },
   opts = {},
 	-- stylua: ignore
-	keys = {
-		{ "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
-		{ "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
-		{ "<leader>xt", "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
-		{ "<leader>xT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
-		{ "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
-		{ "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
-	},
+	keys = function()
+		local map = require("DePaWSiT.remap")
+		return {
+		{ map.NEXT_TODO, function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
+		{ map.PREV_TODO, function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
+		{ map.TODO_TOGGLE, "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
+		{ map.TODO_TOGGLE_FILTER, "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+	}
+end,
 }

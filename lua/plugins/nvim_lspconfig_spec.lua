@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  event = "VeryLazy",
+  event = { "BufRead", "BufNewFile" },
   version = ">=2.0.0",
   --has no setup so we skip it
   config = function()

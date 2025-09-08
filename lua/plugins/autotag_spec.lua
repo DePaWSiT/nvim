@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-ts-autotag",
-  ft = { "html", "xml" },
+  ft = { "html", "xml", "xaml" },
   opts = {
     opts = {
       enable_close = true,

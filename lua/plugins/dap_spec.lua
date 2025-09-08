@@ -1,6 +1,6 @@
 return {
   "mfussenegger/nvim-dap",
-  event = "BufRead",
+  event = { "BufRead", "BufNewFile" },
   config = function()
     local dap = require("dap")
     local map = require("DePaWSiT.remap")

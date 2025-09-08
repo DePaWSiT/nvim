@@ -1,6 +1,7 @@
 return {
   "GustavEikaas/easy-dotnet.nvim",
-  ft = { "cs", "rzls", "sln", "csproj" },
+  --ft = { "cs", "rzls", "sln", "csproj" },
+  event = "VeryLazy",
   dependencies = { "nvim-lua/plenary.nvim", "folke/snacks.nvim" },
   opts = {},
   dev = false,

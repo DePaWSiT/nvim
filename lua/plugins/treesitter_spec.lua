@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   branch = "master",
+  event = "VeryLazy",
   build = ":TSUpdate",
   config = function()
     --List C compilers to use
@@ -19,6 +20,7 @@ return {
         "javadoc",
         "c_sharp",
         "regex",
+        "toml",
       },
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = true,
