@@ -83,16 +83,16 @@ return {
       jdtls = {},
       html = {},
       omnisharp = {
-        cmd = {
-          "omnisharp",
-          "-z",
-          "--hostPID",
-          tostring(vim.fn.getpid()),
-          "DotNet:enablePackageRestore=false",
-          "--encoding",
-          "utf-8",
-          "--languageserver",
-        },
+        -- cmd = {
+        --   "omnisharp",
+        --   "-z",
+        --   "--hostPID",
+        --   tostring(vim.fn.getpid()),
+        --   "DotNet:enablePackageRestore=false",
+        --   "--encoding",
+        --   "utf-8",
+        --   "--languageserver",
+        -- },
         settings = {
           RoslynExtensionsOptions = {
             EnableAnalyzersSupport = true,
@@ -110,7 +110,7 @@ return {
     for name, config in pairs(servers) do
       config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
       vim.lsp.config(name, config)
-      vim.lsp.enable(name)
+      --vim.lsp.enable(name)
     end
   end,
 }

@@ -105,7 +105,7 @@ return {
 
     dap.adapters.coreclr = {
       type = "executable",
-      command = "netcoredbg.exe",
+      command = "netcoredbg",
       args = { "--interpreter=vscode" },
     }
   end,

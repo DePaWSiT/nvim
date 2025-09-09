@@ -12,10 +12,9 @@ return {
       "pyright",
       "html",
       "omnisharp",
-      "omnisharp_mono",
       "jdtls",
     },
-    automatic_enable = false, --config is done in lsp_config_spec.lua
+    automatic_enable = true, --config is done in lsp_config_spec.lua
   },
   config = function(_, opts)
     require("mason-lspconfig").setup(opts)
