@@ -1,4 +1,4 @@
-# stuff to install manually
+# Stuff to install manually... unfortunately :(
 
 if you wanna go crazy, use :checkhealth and install as many warnings as you want
 
