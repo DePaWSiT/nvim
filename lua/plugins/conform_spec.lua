@@ -1,5 +1,6 @@
 return {
   "stevearc/conform.nvim",
+  enabled = true,
   event = "VeryLazy",
   cmd = { "ConformInfo" },
   keys = function()

@@ -1,5 +1,6 @@
 return {
-  "mfussenegger/nvim-dap",
+  "DePaWSiT/nvim-dap",
+  dev = false,
   event = { "BufRead", "BufNewFile" },
   config = function()
     local dap = require("dap")
