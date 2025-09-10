@@ -23,7 +23,7 @@ return {
       { map.HARPOON_NAV_2, desc = "Harpoon 2", icon = harpoon_icon },
       { map.HARPOON_NAV_3, desc = "Harpoon 3", icon = harpoon_icon },
       { map.HARPOON_NAV_4, desc = "Harponn 4", icon = harpoon_icon },
-      { map.TOGGLE_KEY, desc = "Toggle LSP Signature", icon = { icon = "󱡴", color = "purple" } },
+      { map.SIGNATURE_TOGGLE_KEY, desc = "Toggle LSP Signature", icon = { icon = "󱡴", color = "purple" } },
       { map.CYCLE_SIGNATURE, desc = "Cycle LSP Signature", icon = { icon = "", color = "purple" } },
     })
   end,

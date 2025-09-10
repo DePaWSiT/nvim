@@ -18,7 +18,7 @@ return {
         border = "double",
       },
       transparency = 5.0,
-      toggle_key = map.TOGGLE_KEY,
+      toggle_key = map.SIGNATURE_TOGGLE_KEY,
       toggle_key_flip_floatwin_setting = true,
       select_signature_key = map.CYCLE_SIGNATURE,
     }

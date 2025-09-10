@@ -17,14 +17,14 @@ local map = {
   --Undotree
   UNDOTREE_TOGGLE = "<leader>ut",
   --LSP-Signature
-  TOGGLE_KEY = "<C-n>",
+  SIGNATURE_TOGGLE_KEY = "<C-n>",
   CYCLE_SIGNATURE = "<C-o>",
   --LSP-Config
   LSP_RENAME = "<leader>rn",
   LSP_CODE_ACTION = "<leader>ca",
   LSP_GOTO_DEFINITION = "gd",
   LSP_GOTO_DECLARATION = "gD",
-  LSP_GOTO_REFERENCES = "gr",
+  LSP_GOTO_REFERENCES = "gR",
   LSP_GOTO_IMPLEMENTATIONS = "gI",
   LSP_TYPE_DEFINITION = "gy",
   LSP_DOCUMENT_SYMBOLS = "<leader>ds",
