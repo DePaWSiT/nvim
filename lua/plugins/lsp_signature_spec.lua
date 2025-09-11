@@ -4,7 +4,7 @@ return {
   opts = function()
     local map = require("DePaWSiT.remap")
     return {
-      hint_enable = false,
+      hint_enable = true,
       hint_prefix = {
         above = "↙ ", -- when the hint is on the line above the current line
         current = "← ", -- when the hint is on the same line
