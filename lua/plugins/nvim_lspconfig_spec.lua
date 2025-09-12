@@ -80,27 +80,13 @@ return {
       },
       bashls = {},
       pyright = {},
-      jdtls = {},
       html = {},
       omnisharp = {
-        -- cmd = {
-        --   "omnisharp",
-        --   "-z",
-        --   "--hostPID",
-        --   tostring(vim.fn.getpid()),
-        --   "DotNet:enablePackageRestore=false",
-        --   "--encoding",
-        --   "utf-8",
-        --   "--languageserver",
-        -- },
         settings = {
           RoslynExtensionsOptions = {
             EnableAnalyzersSupport = true,
             EnableImportCompletion = true,
-            -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
-            -- true
             AnalyzeOpenDocumentsOnly = true,
-            -- Enables the possibility to see the code in external nuget dependencies
             EnableDecompilationSupport = true,
           },
         },

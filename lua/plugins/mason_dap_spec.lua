@@ -7,8 +7,6 @@ return {
   opts = {
     ensure_installed = {
       "coreclr",
-      "javadbg",
-      "javatest",
     },
   },
   config = function(_, opts)
