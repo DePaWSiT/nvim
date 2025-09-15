@@ -45,7 +45,7 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 Assuming that mason/bin is in PATH
 1. Get the lsp through mason
 2. Add the lsp to the list of servers in nvim_lspconfig_spec.lua
-  - for adding the correct name of the lsp, see the [config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)\
+  - for adding the correct name of the lsp, see the [config](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
 3. Add to either mason_lspconfig or mason_dap
 4. (optional) Configure the lsp if needed
 
@@ -68,5 +68,5 @@ Unix
 - gzip
 
 ## Treesitter
-- (Windows only): [mingw-64](https://www.mingw-w64.org/downloads)\
+- (Windows only): [mingw-64](https://www.mingw-w64.org/downloads)
 - git
