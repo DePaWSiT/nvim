@@ -27,6 +27,8 @@ for _, java_test_jar in ipairs(java_test_bundles) do
   end
 end
 
+--spring boot tools
+vim.list_extend(bundles, require("spring_boot").java_extensions())
 local config = {
   name = "jdtls",
 
