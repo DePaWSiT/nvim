@@ -13,13 +13,9 @@ requires the corresponding [parsers](https://github.com/nvim-treesitter/nvim-tre
 ## Blink
 check the font of the terminal, needs to be a [patched nerd font](https://www.nerdfonts.com/font-downloads) (no mono)
 
-## Conform
+## Conform + other mason installs
 different formatters for different filetypes
-```:MasonInstall xmlformatter```\
-```:MasonInstall stylua```\
-```:MasonInstall prettier```\
-```:MasonInstall jq```\
-```:MasonInstall csharpier```
+```:MasonInstall xmlformatter stylua prettier jq csharpier ```
 
 ## Dadbod + Dotenv
 nothing here to install,
@@ -27,23 +23,25 @@ nothing here to install,
 ```:Dotenv``` to see what is in the env
 
 ## Easy-dotnet
-```:MasonInstall rzls```\
-```:MasonInstall roslyn```\
+```:MasonInstall rzls roslyn```\
 dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft.com/downloads/))
 ### dotnet tooling (terminal commands, requires sdk)
 ```dotnet tool install -g EasyDotnet```\
 ```dotnet tool install -g dotnet-outdated-tool```\
-```dotnet tool install -g dotnet-ef```\
+```dotnet tool install -g dotnet-ef```
 
 ## Grug (search and replace)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for grep functionality)
+
+## Java
+```:MasonInstall vscode-spring-boot-tools java-test java-debug-adapter```
 
 ## Lazy + Snacks
 - git
 - fd or (debian)fd-find
 
 
-## Adding a lsp
+## Adding a lsp (Mason)
 Assuming that mason/bin is in PATH
 1. Get the lsp through mason
 2. Add the lsp to the list of servers in nvim_lspconfig_spec.lua
