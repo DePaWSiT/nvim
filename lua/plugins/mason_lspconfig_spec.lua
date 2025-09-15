@@ -12,8 +12,11 @@ return {
       "pyright",
       "html",
       "omnisharp",
+      "jdtls",
     },
-    automatic_enable = true, --config is done in lsp_config_spec.lua
+    automatic_enable = {
+      exclude = { "jdtls" },
+    }, --config is done in lsp_config_spec.lua
   },
   config = function(_, opts)
     require("mason-lspconfig").setup(opts)
