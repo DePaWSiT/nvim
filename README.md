@@ -61,7 +61,7 @@ Windows:
 - [git](https://git-scm.com/downloads)
 - add powershell from the microsoft store or check of pwsh
 
-Unix
+Unix:
 - git
 - curl (probably installed by default)
 - unzip

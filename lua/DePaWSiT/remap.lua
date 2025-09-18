@@ -116,8 +116,8 @@ local map = {
   SNIP_CUT = "sc",
   --Mardown
   MARKDOWN_TOGGLE = "<leader>mt",
-  MARKDOWN_PREVIEW = "<leader>mp",
-  MARKDOWN_STOP = "<leader>ms",
+  --MARKDOWN_PREVIEW = "<leader>mp",
+  --MARKDOWN_STOP = "<leader>ms",
   --Trouble
   TROUBLE_DIAGNOSTIC_TOGGLE = "<leader>xx",
   TROUBLE_DIAGNOSTIC_CURRENT_BUFFER = "<leader>xX",

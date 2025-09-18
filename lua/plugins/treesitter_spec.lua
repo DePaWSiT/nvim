@@ -1,7 +1,11 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   branch = "master",
-  event = "VeryLazy",
+  dependancies = {
+    "OXY2DEV/markview.nvim",
+  },
+  --event = "VeryLazy",
+  lazy = false,
   build = ":TSUpdate",
   config = function()
     --List C compilers to use
@@ -21,6 +25,8 @@ return {
         "c_sharp",
         "regex",
         "toml",
+        "html",
+        "yaml",
       },
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = true,
