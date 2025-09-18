@@ -116,8 +116,14 @@ local map = {
   SNIP_CUT = "sc",
   --Mardown
   MARKDOWN_TOGGLE = "<leader>mt",
-  --MARKDOWN_PREVIEW = "<leader>mp",
-  --MARKDOWN_STOP = "<leader>ms",
+  MARKDOWN_OPEN = "<leader>mo",
+  MARKDOWN_CLOSE = "<leader>mc",
+  MARKDOWN_RENDER = "<leader>mr",
+  MARKDOWN_SPLIT_TOGGLE = "<leader>mst",
+  MARKDOWN_SPLIT_OPEN = "<leader>mso",
+  MARKDOWN_SPLIT_CLOSE = "<leader>msc",
+  MARKDOWN_SPLIT_REDRAW = "<leader>msr",
+
   --Trouble
   TROUBLE_DIAGNOSTIC_TOGGLE = "<leader>xx",
   TROUBLE_DIAGNOSTIC_CURRENT_BUFFER = "<leader>xX",
