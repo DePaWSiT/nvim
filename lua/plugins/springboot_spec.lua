@@ -1,8 +1,20 @@
 return {
-  "JavaHello/spring-boot.nvim",
-  ft = { "java", "yaml", "jproperties" },
-  dependencies = {
-    "mfussenegger/nvim-jdtls",
+  {
+    "JavaHello/spring-boot.nvim",
+    ft = { "java", "yaml", "jproperties" },
+    dependencies = {
+      "mfussenegger/nvim-jdtls",
+    },
+    opts = {},
   },
-  opts = {},
+  {
+    "DePaWSiT/springboot-nvim",
+    ft = { "java", "yaml", "jproperties" },
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-jdtls",
+    },
+    opts = {},
+    dev = true,
+  },
 }
