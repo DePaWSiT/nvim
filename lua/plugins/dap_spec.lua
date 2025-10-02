@@ -1,5 +1,6 @@
 return {
-  "DePaWSiT/nvim-dap",
+  --"DePaWSiT/nvim-dap",
+  "mfussenegger/nvim-dap",
   dev = false,
   event = { "BufRead", "BufNewFile" },
   config = function()

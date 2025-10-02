@@ -2,7 +2,8 @@ return {
   "rcarriga/nvim-dap-ui",
   event = { "BufRead", "BufNewFile" },
   dependencies = {
-    "DePaWSiT/nvim-dap",
+    --"DePaWSiT/nvim-dap",
+    "mfussenegger/nvim-dap",
     "nvim-neotest/nvim-nio",
   },
   config = function()

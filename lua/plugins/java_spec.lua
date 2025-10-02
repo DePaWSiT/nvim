@@ -3,6 +3,7 @@ return {
   event = { "BufRead", "BufNewFile" },
   config = false,
   dependencies = {
-    "DePaWSiT/nvim-dap",
+    --"DePaWSiT/nvim-dap",
+    "mfussenegger/nvim-dap",
   },
 }

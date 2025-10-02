@@ -17,7 +17,7 @@ local map = {
   --Undotree
   UNDOTREE_TOGGLE = "<leader>ut",
   --LSP-Signature
-  SIGNATURE_TOGGLE_KEY = "<C-n>",
+  SIGNATURE_TOGGLE_KEY = "<C-k>",
   CYCLE_SIGNATURE = "<C-o>",
   --LSP-Config
   LSP_RENAME = "<leader>rn",
