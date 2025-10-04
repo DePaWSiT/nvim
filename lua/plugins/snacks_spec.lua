@@ -2,6 +2,10 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
+  init = function()
+    vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#1a1d09", nocombine = true })
+    vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#7ba32a", nocombine = true })
+  end,
   opts = {
     dashboard = {
       preset = {
@@ -23,6 +27,19 @@ return {
     },
     explorer = { enabled = false },
     input = { enabled = true },
+    indent = {
+      enabled = true,
+      only_scope = false,
+      animate = {
+        duration = {
+          step = 20,
+          total = 360,
+        },
+      },
+      scope = {
+        underline = true,
+      },
+    },
     notifier = { enabled = true },
     quickfile = {
       enabled = true,
