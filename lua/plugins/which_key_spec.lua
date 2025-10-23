@@ -15,6 +15,7 @@ return {
     local wk = require("which-key")
     local harpoon_icon = { icon = "󱡅", color = "cyan", name = "harpoon_icon" }
     local markdown_icon = { icon = "󰽛", color = "yellow", name = "md_icon" }
+    local neotest_icon = { icon = "󰙨", color = "purple", name = "test_icon" }
     wk.add({
       { map.HARPOON_ADD_FILE, desc = "Add Harpoon", icon = harpoon_icon },
       { map.HARPOON_TOGGLE_MENU, desc = "Menu Harpoon", icon = harpoon_icon },
@@ -29,16 +30,29 @@ return {
         map.CYCLE_SIGNATURE,
         desc = "Cycle LSP Signature",
         icon = { icon = "", color = "purple" },
-        { map.MARKDOWN_TOGGLE, desc = "Toggle Markdown", icon = markdown_icon },
-        { map.MARKDOWN_OPEN, desc = "Open Markdown", icon = markdown_icon },
-        { map.MARKDOWN_CLOSE, desc = "Close Markdown", icon = markdown_icon },
-        { map.MARKDOWN_RENDER, desc = "Refresh Markdown", icon = markdown_icon },
-        { map.MARKDOWN_CLEAR, desc = "Clear Markdown", icon = markdown_icon },
-        { map.MARKDOWN_SPLIT_TOGGLE, desc = "Toggle Splitview", icon = markdown_icon },
-        { map.MARKDOWN_SPLIT_OPEN, desc = "Open Splitview", icon = markdown_icon },
-        { map.MARKDOWN_SPLIT_CLOSE, desc = "Close Splitview", icon = markdown_icon },
-        { map.MARKDOWN_SPLIT_REDRAW, desc = "Refresh Splitview", icon = markdown_icon },
       },
+      { map.MARKDOWN_TOGGLE, desc = "Toggle Markdown", icon = markdown_icon },
+      { map.MARKDOWN_OPEN, desc = "Open Markdown", icon = markdown_icon },
+      { map.MARKDOWN_CLOSE, desc = "Close Markdown", icon = markdown_icon },
+      { map.MARKDOWN_RENDER, desc = "Refresh Markdown", icon = markdown_icon },
+      { map.MARKDOWN_CLEAR, desc = "Clear Markdown", icon = markdown_icon },
+      { map.MARKDOWN_SPLIT_TOGGLE, desc = "Toggle Splitview", icon = markdown_icon },
+      { map.MARKDOWN_SPLIT_OPEN, desc = "Open Splitview", icon = markdown_icon },
+      { map.MARKDOWN_SPLIT_CLOSE, desc = "Close Splitview", icon = markdown_icon },
+      { map.MARKDOWN_SPLIT_REDRAW, desc = "Refresh Splitview", icon = markdown_icon },
+      { map.RUN_TEST_NEAR, icon = neotest_icon },
+      { map.RUN_TEST_FILE, icon = neotest_icon },
+      { map.RUN_TEST_NEAR_DAP, icon = neotest_icon },
+      { map.RUN_TEST_FILE_DAP, icon = neotest_icon },
+      { map.STOP_TEST, icon = neotest_icon },
+      { map.OPEN_TEST_OUTPUT, icon = neotest_icon },
+      { map.OPEN_TEST_PANEL, icon = neotest_icon },
+      { map.CLOSE_TEST_PANEL, icon = neotest_icon },
+      { map.CLEAR_TEST_PANEL, icon = neotest_icon },
+      { map.OPEN_TEST_SUMMARY, icon = neotest_icon },
+      { map.CLOSE_TEST_SUMMARY, icon = neotest_icon },
+      { map.RUN_MARKED_TESTS, icon = neotest_icon },
+      { map.CLEAR_MARKED_TESTS, icon = neotest_icon },
     })
   end,
   opts = {
