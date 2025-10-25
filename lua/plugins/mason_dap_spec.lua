@@ -1,8 +1,9 @@
 return {
   "jay-babu/mason-nvim-dap.nvim",
-  event = "VeryLazy",
+  event = { "BufRead", "BufNewFile" },
   dependancies = {
     "mason-org/mason.nvim",
+    "mfussenegger/nvim-dap",
   },
   opts = {
     ensure_installed = {
