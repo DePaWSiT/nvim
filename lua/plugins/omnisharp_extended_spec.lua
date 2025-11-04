@@ -1,5 +1,5 @@
 return {
   "hoffs/omnisharp-extended-lsp.nvim",
-  ft = { "cs" },
+  lazy = true,
   config = function() end,
 }

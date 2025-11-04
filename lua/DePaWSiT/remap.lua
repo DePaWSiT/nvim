@@ -20,8 +20,8 @@ local map = {
   SIGNATURE_TOGGLE_KEY = "<C-k>",
   CYCLE_SIGNATURE = "<C-o>",
   --LSP-Config
-  LSP_RENAME = "<leader>rn",
-  LSP_CODE_ACTION = "<leader>ca",
+  LSP_RENAME = "grn",
+  LSP_CODE_ACTION = "gca",
   LSP_GOTO_DEFINITION = "gd",
   LSP_GOTO_DECLARATION = "gD",
   LSP_GOTO_REFERENCES = "gR",

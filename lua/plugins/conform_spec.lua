@@ -54,11 +54,6 @@ return {
         args = { "$FILENAME", "--write", "--log-level", "silent" },
         stdin = true,
       },
-      stylua = {
-        command = "stylua",
-        args = { "-" },
-        stdin = true,
-      },
     },
   },
   config = function(_, opts)

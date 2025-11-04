@@ -4,6 +4,11 @@ return {
   ft = { "cs", "sln", "slnx", "csproj", "props", "csx", "targets" },
   cmd = "Dotnet",
   dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {},
+  opts = {
+    lsp = {
+      enabled = false,
+      roslynator_enabled = false,
+    },
+  },
   dev = false,
 }
