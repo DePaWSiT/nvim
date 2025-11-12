@@ -11,6 +11,7 @@ return {
     "DePaWSiT/springboot-nvim",
     ft = { "java", "yaml", "jproperties" },
     lazy = true,
+branch = "personal",
     dependencies = {
       "neovim/nvim-lspconfig",
       "mfussenegger/nvim-jdtls",
@@ -19,6 +20,6 @@ return {
       dev_menu = true,
     },
     cmd = { "Spring" },
-    dev = true,
+    dev = false,
   },
 }
