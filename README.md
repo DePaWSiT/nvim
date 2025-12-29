@@ -23,7 +23,7 @@ nothing here to install,
 ```:Dotenv``` to see what is in the env
 
 ## Easy-dotnet
-```:MasonInstall rzls roslyn```\
+```:MasonInstall roslyn```\
 dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft.com/downloads/))
 ### dotnet tooling (terminal commands, requires sdk)
 ```dotnet tool install -g EasyDotnet```\
