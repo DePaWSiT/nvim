@@ -15,7 +15,9 @@ check the font of the terminal, needs to be a [patched nerd font](https://www.ne
 
 ## Conform + other mason installs
 different formatters for different filetypes
-```:MasonInstall xmlformatter stylua prettier jq csharpier ```
+```:MasonInstall xmlformatter stylua prettier csharpier ```\
+NOTE: on linux distros, jq is often available as a system package.\
+if not you can add jq to the command above to install that alongside the rest.
 
 ## Dadbod + Dotenv
 nothing here to install,
