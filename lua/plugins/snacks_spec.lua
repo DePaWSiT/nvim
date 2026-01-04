@@ -25,7 +25,7 @@ return {
         },
       },
     },
-    explorer = { enabled = false },
+    explorer = { enabled = true },
     input = { enabled = true },
     indent = {
       enabled = true,
