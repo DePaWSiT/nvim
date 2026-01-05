@@ -7,6 +7,7 @@ vim.cmd.set("laststatus=3")
 vim.cmd.set("updatetime=200")
 vim.cmd.set("signcolumn=yes")
 
+-- delete some vim lsp keybinds to be used later
 vim.keymap.del("n", "grn")
 vim.keymap.del("x", "gra")
 vim.keymap.del("n", "grr")
