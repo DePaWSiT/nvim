@@ -3,6 +3,6 @@ return {
   opts = {},
   priority = 1000,
   init = function()
-    vim.cmd([[colorscheme monokai-pro-classic]])
+    vim.cmd.colorscheme("monokai-pro-classic")
   end,
 }
