@@ -2,9 +2,8 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  init = function()
-    vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#1a1d09", nocombine = true })
-    vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#7ba32a", nocombine = true })
+  init = function(snacks)
+    vim.cmd.colorscheme("gruvbox")
   end,
   opts = {
     dashboard = {
