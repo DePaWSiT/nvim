@@ -2,7 +2,7 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  init = function(snacks)
+  init = function()
     vim.cmd.colorscheme("gruvbox")
   end,
   opts = {

@@ -68,9 +68,7 @@ return {
       lua_ls = {
         settings = {
           Lua = {
-            diagnostics = {
-              globals = { "vim" },
-            },
+            diagnostics = { globals = { "vim" } },
             workspace = {
               checkThirdParty = false,
               library = vim.api.nvim_get_runtime_file("", true),
@@ -96,7 +94,7 @@ return {
     for name, config in pairs(servers) do
       config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
       vim.lsp.config(name, config)
-      --vim.lsp.enable(name)
+      -- vim.lsp.enable(name)
     end
   end,
 }
