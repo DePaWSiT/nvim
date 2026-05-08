@@ -1,9 +1,10 @@
 return {
   "folke/snacks.nvim",
-  priority = 1000,
+  priority = 950,
   lazy = false,
   init = function()
-    vim.cmd.colorscheme("gruvbox")
+    -- vim.cmd.colorscheme("gruvbox")
+    vim.cmd.colorscheme("monokai-v2")
   end,
   opts = {
     dashboard = {
