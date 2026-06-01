@@ -21,7 +21,7 @@ return {
     log_level = vim.log.levels.DEBUG,
     formatters_by_ft = {
       cs = { "csharpier" },
-      xml = { "xmlformat" }, -- Works for both .xml and .xaml files
+      xml = { "xmlformatter" }, -- Works for both .xml and .xaml files
       html = { "prettier" },
       css = { "prettier" },
       jsx = { "prettier" },
@@ -44,9 +44,9 @@ return {
         args = { "format", "--stdin-path", "$FILENAME", "--write-stdout" },
         stdin = true,
       },
-      xmlformat = {
+      xmlformatter = {
         command = "xmlformat",
-        args = { "--selfclose", "-" },
+        args = { "--blanks", "--indent", 2, "--indent-char", " ", "-" },
         stdin = true,
       },
       prettier = {

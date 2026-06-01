@@ -79,6 +79,7 @@ return {
           },
         },
       },
+      lemminx = {},
     }
 
     for name, config in pairs(servers) do

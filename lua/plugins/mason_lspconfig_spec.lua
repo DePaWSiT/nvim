@@ -13,6 +13,7 @@ return {
       "html",
       "omnisharp",
       "jdtls",
+      "lemminx",
     },
     automatic_enable = {
       exclude = { "jdtls" },
