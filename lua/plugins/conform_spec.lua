@@ -24,9 +24,10 @@ return {
       xml = { "xmlformatter" }, -- Works for both .xml and .xaml files
       html = { "prettier" },
       css = { "prettier" },
-      jsx = { "prettier" },
-      ts = { "prettier" },
-      tsx = { "prettier" },
+      javascript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
       json = { "prettier" },
       scss = { "prettier" },
       md = { "prettier" },
@@ -52,7 +53,7 @@ return {
       },
       prettier = {
         command = "prettier",
-        args = { "$FILENAME", "--write", "--log-level", "silent" },
+        args = { "--write", "--log-level", "silent", "--stdin-filepath", "$FILENAME" },
         stdin = true,
       },
     },

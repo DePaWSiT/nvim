@@ -8,10 +8,11 @@ return {
   opts = {
     ensure_installed = {
       "lua_ls",
-      "ts_ls",
       "bashls",
       "pyright",
       "html",
+      "cssls",
+      "ts_ls",
       "omnisharp",
       "jdtls",
       "lemminx",
