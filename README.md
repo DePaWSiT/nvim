@@ -1,4 +1,6 @@
 # Stuff to install manually... unfortunately :(
+- kitty (or another clipboard supporting osc-52)
+  - kitty does require a monospaced font
 
 if you wanna go crazy, use :checkhealth and install as many warnings as you want
 
@@ -72,3 +74,6 @@ Unix:
 ## Treesitter
 - (Windows only): [mingw-64](https://www.mingw-w64.org/downloads)
 - git
+
+# Custom commands
+```FormatToggle <formatter>``` allows you to enable and disable the <formatter>. (active formatter can be found in lualine)
