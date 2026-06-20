@@ -2,6 +2,7 @@ return {
   "stevearc/conform.nvim",
   enabled = true,
   event = "VeryLazy",
+  dependencies = { "folke/snacks.nvim" },
   cmd = { "ConformInfo" },
   keys = function()
     local remap = require("DePaWSiT.remap")
@@ -33,10 +34,6 @@ return {
       md = { "prettier" },
       lua = { "stylua" },
     },
-    format_on_save = {
-      timeout = 2000,
-      lsp_format = "fallback",
-    },
     default_format_opts = {
       lsp_format = "fallback",
     },
@@ -59,6 +56,25 @@ return {
     },
   },
   config = function(_, opts)
+    local notify = require("snacks.notify")
+    local format_util = require("DePaWSiT.format_util")
+
+    vim.api.nvim_create_user_command("FormatToggle", function(toggle_opts)
+      format_util.toggle_formatter(toggle_opts.args)
+    end, { nargs = 1 })
+
+    opts.format_on_save = function(bufnr)
+      local formatters = require("conform").list_formatters_for_buffer(bufnr)
+      formatters = vim.tbl_filter(function(formatter)
+        return not format_util.is_disabled(formatter)
+      end, formatters)
+      return {
+        formatters = formatters,
+        lsp_format = "fallback",
+        timeout = 1000,
+      }
+    end
+
     require("conform").setup(opts)
     vim.filetype.add({
       extension = {
