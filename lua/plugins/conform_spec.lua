@@ -56,7 +56,6 @@ return {
     },
   },
   config = function(_, opts)
-    local notify = require("snacks.notify")
     local format_util = require("DePaWSiT.format_util")
 
     vim.api.nvim_create_user_command("FormatToggle", function(toggle_opts)
