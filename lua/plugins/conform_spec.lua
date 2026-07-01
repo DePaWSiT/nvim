@@ -56,19 +56,11 @@ return {
     },
   },
   config = function(_, opts)
-    local format_util = require("DePaWSiT.format_util")
-
-    vim.api.nvim_create_user_command("FormatToggle", function(toggle_opts)
-      format_util.toggle_formatter(toggle_opts.args)
-    end, { nargs = 1 })
-
     opts.format_on_save = function(bufnr)
-      local formatters = require("conform").list_formatters_for_buffer(bufnr)
-      formatters = vim.tbl_filter(function(formatter)
-        return not format_util.is_disabled(formatter)
-      end, formatters)
+      local format_toggle = require("format-toggle")
+      local formatters = format_toggle.format_util.conform_formatters(bufnr)
       return {
-        formatters = formatters,
+        formatters = formatters.formatters,
         lsp_format = "fallback",
         timeout = 1000,
       }

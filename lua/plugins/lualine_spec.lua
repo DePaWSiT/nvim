@@ -6,7 +6,7 @@ return {
     "ray-x/lsp_signature.nvim",
   },
   opts = function(_, opts)
-    local format_util = require("DePaWSiT.format_util")
+    local format_util = require("format-toggle").format_util
     opts.options = {
       theme = "auto",
     }
@@ -23,7 +23,7 @@ return {
           end,
         },
       },
-      lualine_x = { "lsp_status", format_util.conform_formatters, "filetype" },
+      lualine_x = { "lsp_status", format_util.formatter_display, "filetype" },
     }
   end,
 }
