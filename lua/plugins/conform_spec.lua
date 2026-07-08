@@ -57,8 +57,7 @@ return {
   },
   config = function(_, opts)
     opts.format_on_save = function(bufnr)
-      local format_toggle = require("format-toggle")
-      local formatters = format_toggle.format_util.conform_formatters(bufnr)
+      local formatters = require("format-toggle").available_formatters(bufnr)
       return {
         formatters = formatters.formatters,
         lsp_format = "fallback",
