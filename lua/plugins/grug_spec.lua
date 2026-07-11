@@ -1,6 +1,6 @@
 return {
   "MagicDuck/grug-far.nvim",
-  event = "VeryLazy",
+  event = { "BufNewFile", "BufReadPre" },
   opts = { headerMaxWidth = 80 },
   cmd = "GrugFar",
   keys = function()
@@ -23,5 +23,4 @@ return {
       },
     }
   end,
-  {},
 }

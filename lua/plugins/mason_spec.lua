@@ -1,7 +1,7 @@
 return {
   "mason-org/mason.nvim",
   build = ":MasonUpdate",
-  event = "VeryLazy",
+  event = { "BufNewFile", "BufReadPre" },
   version = ">=2.0.0",
   opts = {
     registries = {

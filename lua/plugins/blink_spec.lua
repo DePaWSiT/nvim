@@ -2,7 +2,7 @@ return {
   "saghen/blink.cmp",
   -- optional: provides snippets for the snippet source
   dependencies = { "rafamadriz/friendly-snippets" },
-  event = "VeryLazy",
+  event = { "CmdWinEnter", "BufNewFile", "BufReadPre" },
   version = "1.*",
   opts = {
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
@@ -40,7 +40,7 @@ return {
           name = "easy-dotnet",
           enabled = true,
           module = "easy-dotnet.completion.blink",
-          score_offset = 10000,
+          score_offset = 1000,
           async = true,
         },
         lazydev = {

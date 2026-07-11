@@ -1,6 +1,6 @@
 return {
   "jay-babu/mason-nvim-dap.nvim",
-  event = { "BufRead", "BufNewFile" },
+  event = { "BufNewFile", "BufReadPre" },
   dependancies = {
     "mason-org/mason.nvim",
     "mfussenegger/nvim-dap",

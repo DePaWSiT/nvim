@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   enabled = true,
-  event = "VeryLazy",
+  event = { "BufWritePre" },
   dependencies = { "folke/snacks.nvim" },
   cmd = { "ConformInfo" },
   keys = function()
