@@ -3,19 +3,26 @@ return {
   ft = { "razor" },
   dependencies = {
     {
-      -- By loading as a dependencies, we ensure that we are available to set
-      -- the handlers for Roslyn.
       "tris203/rzls.nvim",
       config = true,
     },
   },
+  init = function()
+    -- We add the Razor file types before the plugin loads.
+    vim.filetype.add({
+      extension = {
+        razor = "razor",
+        cshtml = "razor",
+      },
+    })
+  end,
   config = function()
     local rzls_path = vim.fn.expand("$MASON/packages/rzls/libexec")
     local cmd = {
       "roslyn",
       "--stdio",
       "--logLevel=Information",
-      "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
+      "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.log.get_filename()),
       "--razorSourceGenerator=" .. vim.fs.joinpath(rzls_path, "Microsoft.CodeAnalysis.Razor.Compiler.dll"),
       "--razorDesignTimePath=" .. vim.fs.joinpath(rzls_path, "Targets", "Microsoft.NET.Sdk.Razor.DesignTime.targets"),
       "--extension",
@@ -51,15 +58,5 @@ return {
       },
     })
     vim.lsp.enable("roslyn")
-  end,
-
-  init = function()
-    -- We add the Razor file types before the plugin loads.
-    vim.filetype.add({
-      extension = {
-        razor = "razor",
-        cshtml = "razor",
-      },
-    })
   end,
 }
