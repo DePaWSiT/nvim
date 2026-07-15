@@ -17,7 +17,7 @@ requires the corresponding [parsers](https://github.com/nvim-treesitter/nvim-tre
 
 ## Blink
 
-check the font of the terminal, needs to be a [patched nerd font](https://www.nerdfonts.com/font-downloads) (no mono)
+check the font of the terminal, needs to be a [patched nerd font](https://www.nerdfonts.com/font-downloads)
 
 ## Conform + other mason installs
 
