@@ -4,10 +4,12 @@ return {
   event = { "BufRead", "BufNewFile" },
   dependencies = { "stevearc/conform.nvim", "nvim-lualine/lualine.nvim" },
   cmd = { "FormatToggle" },
-  dev = true,
-  dir = "/mnt/SharedSpace/Code/nvim/format-toggle.nvim",
+  -- dev = false,
+  -- branch = "main",
+  -- dir = "/mnt/SharedSpace/Code/nvim/format-toggle.nvim",
   opts = {
     prefix = "󰉼",
     toggle_cmd = "FormatToggle",
+    lsp_format = "fallback",
   },
 }

@@ -10,12 +10,15 @@ return {
       {
         remap.FORMAT_FILE,
         function()
-          local formatters = require("format-toggle").available_formatters().formatters
-          require("conform").format({ formatters = formatters, async = true }, function(err, did_edit)
-            if not did_edit then
-              vim.notify("Failed to format: " .. err, 4)
+          local formatters = require("format-toggle").available_formatters()
+          require("conform").format(
+            { formatters = formatters.formatters, lsp_format = formatters.lsp_format, async = true },
+            function(err, did_edit)
+              if not did_edit then
+                vim.notify("Failed to format: " .. err, 4, { title = "Conform" })
+              end
             end
-          end)
+          )
           vim.cmd("write")
         end,
         mode = "n",
@@ -65,7 +68,7 @@ return {
       local formatters = require("format-toggle").available_formatters(bufnr)
       return {
         formatters = formatters.formatters,
-        lsp_format = "fallback",
+        lsp_format = formatters.lsp_format,
         timeout = 1000,
       }
     end
