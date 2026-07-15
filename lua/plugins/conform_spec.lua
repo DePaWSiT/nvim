@@ -6,11 +6,11 @@ return {
   cmd = { "ConformInfo" },
   keys = function()
     local remap = require("DePaWSiT.remap")
-    local formatters = require("format-toggle").available_formatters().formatters
     return {
       {
         remap.FORMAT_FILE,
         function()
+          local formatters = require("format-toggle").available_formatters().formatters
           require("conform").format({ formatters = formatters, async = true }, function(err, did_edit)
             if not did_edit then
               vim.notify("Failed to format: " .. err, 4)
