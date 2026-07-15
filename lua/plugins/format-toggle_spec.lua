@@ -6,6 +6,7 @@ return {
   cmd = { "FormatToggle" },
   dev = true,
   dir = "/mnt/SharedSpace/Code/nvim/format-toggle.nvim",
+  branch = "picker",
   opts = {
     prefix = "󰉼",
     toggle_cmd = "FormatToggle",

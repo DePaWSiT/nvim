@@ -6,11 +6,16 @@ return {
   cmd = { "ConformInfo" },
   keys = function()
     local remap = require("DePaWSiT.remap")
+    local formatters = require("format-toggle").available_formatters().formatters
     return {
       {
         remap.FORMAT_FILE,
         function()
-          require("conform").format({ async = false })
+          require("conform").format({ formatters = formatters, async = true }, function(err, did_edit)
+            if not did_edit then
+              vim.notify("Failed to format: " .. err, 4)
+            end
+          end)
           vim.cmd("write")
         end,
         mode = "n",
@@ -31,7 +36,7 @@ return {
       typescriptreact = { "prettier" },
       json = { "prettier" },
       scss = { "prettier" },
-      md = { "prettier" },
+      markdown = { "prettier" },
       lua = { "stylua" },
     },
     default_format_opts = {
