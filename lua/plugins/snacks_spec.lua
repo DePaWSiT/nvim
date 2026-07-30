@@ -3,8 +3,7 @@ return {
   priority = 950,
   lazy = false,
   init = function()
-    -- vim.cmd.colorscheme("gruvbox")
-    vim.cmd.colorscheme("monokai-v2")
+    vim.cmd.colorscheme("tokyonight-night")
   end,
   opts = {
     dashboard = {
