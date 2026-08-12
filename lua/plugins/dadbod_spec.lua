@@ -2,10 +2,12 @@ return {
   {
     "tpope/vim-dadbod",
     lazy = true,
+    enabled = false,
   },
   {
     "kristijanhusak/vim-dadbod-ui",
     lazy = true,
+    enabled = false,
     cmd = {
       "DBUI",
       "DBUIToggle",

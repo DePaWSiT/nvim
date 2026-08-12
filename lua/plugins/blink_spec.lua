@@ -32,10 +32,9 @@ return {
     sources = {
       default = { "lsp", "easy-dotnet", "lazydev", "path", "snippets", "buffer" },
       per_filetype = {
-        sql = { "snippets", "dadbod", "buffer" },
+        sql = { "snippets", "buffer" },
       },
       providers = {
-        dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
         ["easy-dotnet"] = {
           name = "easy-dotnet",
           enabled = true,
