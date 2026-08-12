@@ -42,9 +42,6 @@ return {
       markdown = { "prettier" },
       lua = { "stylua" },
     },
-    default_format_opts = {
-      lsp_format = "fallback",
-    },
     formatters = {
       csharpier = {
         command = "csharpier",
