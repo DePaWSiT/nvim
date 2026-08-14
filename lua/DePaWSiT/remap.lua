@@ -47,6 +47,8 @@ local map = {
   DAP_REPL_TOGGLE = "<leader>dr",
   DAP_DOWN = "<leader>dj",
   DAP_UP = "<leader>dk",
+  -- Format Toggle
+  FORMAT_TOGGLE = "<leader>ft",
   --NeoTest
   RUN_TEST_NEAR = "<leader>tr",
   RUN_TEST_FILE = "<leader>tf",
