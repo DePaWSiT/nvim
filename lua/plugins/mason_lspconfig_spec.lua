@@ -9,7 +9,7 @@ return {
     ensure_installed = {
       "lua_ls",
       "bashls",
-      "pyright",
+      "zuban",
       "html",
       "cssls",
       "ts_ls",

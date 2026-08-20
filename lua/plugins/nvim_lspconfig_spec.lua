@@ -67,7 +67,7 @@ return {
     local servers = {
       lua_ls = {},
       bashls = {},
-      pyright = {},
+      zuban = {},
       html = {},
       omnisharp = {
         settings = {
