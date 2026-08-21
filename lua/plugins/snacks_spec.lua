@@ -2,9 +2,9 @@ return {
   "folke/snacks.nvim",
   priority = 950,
   lazy = false,
-  init = function()
-    vim.cmd.colorscheme("tokyonight-night")
-  end,
+  -- init = function()
+  --   vim.cmd.colorscheme("tokyonight-night")
+  -- end,
   opts = {
     dashboard = {
       preset = {
