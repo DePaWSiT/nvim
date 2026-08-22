@@ -1,3 +1,4 @@
+local c = require("themes.gfl416.lua.lush_theme.colors")
 --
 -- Built with,
 --
@@ -44,24 +45,6 @@
 
 local lush = require("lush")
 local hsl = lush.hsl
-
-local carbon_black = "#111111"
-local gunmetal_grey = "#2c3539"
-local white_plat = "#cbdae0"
-local white_shade = "#95b3bf"
-local bright_red = "#e92241"
-local deep_red = "#9f1c30"
-local orange404 = "#f79a17"
-local khaki = "#bca47a"
-local purple = "#4b4276"
-local purple_shade = "#3d324a"
-local purple_dark = "#281837"
-local yellow = "#94990e"
-local yellow_dark = "#636300"
-local green = "#a1db64"
-local green_shade = "#6aab36"
-local beret = "#19222b"
-local beret_shade = "#13131e"
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
@@ -114,8 +97,8 @@ local theme = lush(function(injected_functions)
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg        { }, -- |more-prompt|
     -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal({ bg = hsl(beret_shade), fg = hsl(white_plat) }), -- Normal text
-    NormalFloat({ bg = hsl(beret_shade) }), -- Normal text in floating windows.
+    Normal({ bg = hsl(c.beret_shade), fg = hsl(c.white_plat) }), -- Normal text
+    NormalFloat({ bg = hsl(c.beret_shade) }), -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
     -- FloatTitle     { }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
@@ -149,7 +132,7 @@ local theme = lush(function(injected_functions)
     -- WildMenu       { }, -- Current match in 'wildmenu' completion
     -- WinBar         { }, -- Window bar of current window
     -- WinBarNC       { }, -- Window bar of not-current windows
-    SnacksDashboardHeader({ fg = hsl(orange404) }),
+    SnacksDashboardHeader({ fg = hsl(c.orange404) }),
 
     -- Common vim syntax groups used for all kinds of code and markup.
     -- Commented-out groups should chain up to their preferred (*) group
@@ -162,25 +145,25 @@ local theme = lush(function(injected_functions)
     -- Comment({ fg = hsl(khaki) }), -- Any comment
 
     -- Constant       { }, -- (*) Any constant
-    String({ fg = hsl(orange404) }), --   A string constant: "this is a string"
-    Character({ fg = hsl(orange404) }), --   A character constant: 'c', '\n'
-    Number({ fg = hsl(green_shade) }), --   A number constant: 234, 0xff
-    Boolean({ fg = hsl(green) }), --   A boolean constant: TRUE, false
-    Float({ fg = hsl(green_shade) }), --   A floating point constant: 2.3e10
+    String({ fg = hsl(c.orange404) }), --   A string constant: "this is a string"
+    Character({ fg = hsl(c.orange404) }), --   A character constant: 'c', '\n'
+    Number({ fg = hsl(c.green_shade) }), --   A number constant: 234, 0xff
+    Boolean({ fg = hsl(c.green) }), --   A boolean constant: TRUE, false
+    Float({ fg = hsl(c.green_shade) }), --   A floating point constant: 2.3e10
 
     -- Identifier     { }, -- (*) Any variable name
-    -- Function       { }, --   Function name (also: methods for classes)
+    Function({ fg = hsl(c.yellow) }), --   Function name (also: methods for classes)
 
     -- Statement      { }, -- (*) Any statement
-    Conditional({ fg = hsl(purple) }), --   if, then, else, endif, switch, etc.
-    Repeat({ fg = hsl(purple) }), --   for, do, while, etc.
-    -- Label          { }, --   case, default, etc.
+    Conditional({ fg = hsl(c.purple) }), --   if, then, else, endif, switch, etc.
+    Repeat({ fg = hsl(c.purple) }), --   for, do, while, etc.
+    Label({ fg = hsl(c.purple) }), --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    -- Keyword        { }, --   any other keyword
-    Exception({ fg = hsl(purple) }), --   try, catch, throw
+    Keyword({ fg = hsl(c.yellow) }), --   any other keyword
+    Exception({ fg = hsl(c.purple) }), --   try, catch, throw
 
     -- PreProc        { }, -- (*) Generic Preprocessor
-    -- Include        { }, --   Preprocessor #include
+    Include({ fg = hsl(c.yellow_dark) }), --   Preprocessor #include
     -- Define         { }, --   Preprocessor #define
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
@@ -194,13 +177,12 @@ local theme = lush(function(injected_functions)
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
-    SpecialComment({ fg = hsl(deep_red) }), --   Special things inside a comment (e.g. '\n')
+    SpecialComment({ fg = hsl(c.deep_red) }), --   Special things inside a comment (e.g. '\n')
     -- Debug          { }, --   Debugging statements
-
     Underlined({ gui = "underline" }), -- Text that stands out, HTML links
     -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
-    Error({ bg = hsl(bright_red) }), -- Any erroneous construct
-    Todo({ bg = hsl(beret) }), -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Error({ bg = hsl(c.bright_red) }), -- Any erroneous construct
+    Todo({ bg = hsl(c.white_shade), fg = hsl(c.deep_red) }), -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- These groups are for the native LSP client and diagnostic system. Some
     -- other LSP clients may use these groups, or use their own. Consult your
@@ -280,10 +262,10 @@ local theme = lush(function(injected_functions)
     -- sym"@character.special" { }, -- SpecialChar
     -- sym"@number"            { }, -- Number
     -- sym"@boolean"           { }, -- Boolean
-    -- sym"@float"             { }, -- Float
-    -- sym"@function"          { }, -- Function
-    -- sym"@function.builtin"  { }, -- Special
-    -- sym"@function.macro"    { }, -- Macro
+    sym("@float")({ fg = hsl(c.green_shade) }), -- Float
+    sym("@function")({ fg = hsl(c.purple) }), -- Function
+    sym("@function.builtin")({}), -- Special
+    sym("@function.macro")({}), -- Macro
     -- sym"@parameter"         { }, -- Identifier
     -- sym"@method"            { }, -- Function
     -- sym"@field"             { }, -- Identifier

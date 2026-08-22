@@ -9,7 +9,22 @@ return {
     dashboard = {
       preset = {
         header = require("DePaWSiT.header"),
-        keys = {},
+      },
+      sections = {
+        {
+          section = "header",
+        },
+        function()
+          local lazy_stats = require("lazy").stats()
+          local ms = (math.floor(lazy_stats.startuptime * 100 + 0.5) / 100)
+          return {
+            align = "center",
+            text = {
+              { "Neural cloud loaded in ", hl = "Normal" },
+              { ms .. " ms", hl = "Special" },
+            },
+          }
+        end,
       },
     },
     bigfile = {
