@@ -1,4 +1,4 @@
-local c = require("themes.gfl416.lua.lush_theme.colors")
+local c = require("DePaWSiT.colors")
 --
 -- Built with,
 --
@@ -112,7 +112,7 @@ local theme = lush(function(injected_functions)
     -- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
     -- Question       { }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    -- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+    Search({ bg = hsl(c.purple), fg = hsl(c.white_plat) }), -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
     -- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
     -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -151,7 +151,7 @@ local theme = lush(function(injected_functions)
     Boolean({ fg = hsl(c.green) }), --   A boolean constant: TRUE, false
     Float({ fg = hsl(c.green_shade) }), --   A floating point constant: 2.3e10
 
-    -- Identifier     { }, -- (*) Any variable name
+    Identifier({ fg = hsl(c.white_shade) }), -- (*) Any variable name
     Function({ fg = hsl(c.yellow) }), --   Function name (also: methods for classes)
 
     -- Statement      { }, -- (*) Any statement
@@ -182,7 +182,7 @@ local theme = lush(function(injected_functions)
     Underlined({ gui = "underline" }), -- Text that stands out, HTML links
     -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
     Error({ bg = hsl(c.bright_red) }), -- Any erroneous construct
-    Todo({ bg = hsl(c.white_shade), fg = hsl(c.deep_red) }), -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo({ bg = hsl(c.white_shade), fg = hsl(c.purple_dark) }), -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- These groups are for the native LSP client and diagnostic system. Some
     -- other LSP clients may use these groups, or use their own. Consult your

@@ -7,7 +7,7 @@ return {
   },
   opts = function(_, opts)
     local format_toggle = require("format-toggle")
-    local c = require("themes.gfl416.lua.lush_theme.colors")
+    local c = require("DePaWSiT.colors")
     opts.options = {
       theme = {
         normal = {
