@@ -70,7 +70,7 @@ local theme = lush(function(injected_functions)
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     -- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     -- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-    -- Directory      { }, -- Directory names (and other special names in listings)
+    Directory({ fg = hsl(c.blue_light) }), -- Directory names (and other special names in listings)
     -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
     -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
     -- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
@@ -99,7 +99,7 @@ local theme = lush(function(injected_functions)
     -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal({ bg = hsl(c.beret_shade), fg = hsl(c.white_plat) }), -- Normal text
     NormalFloat({ bg = hsl(c.beret_shade) }), -- Normal text in floating windows.
-    -- FloatBorder    { }, -- Border of floating windows.
+    FloatBorder({ fg = hsl(c.white_plat) }), -- Border of floating windows.
     -- FloatTitle     { }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     -- Pmenu          { }, -- Popup menu: Normal item.
@@ -147,36 +147,36 @@ local theme = lush(function(injected_functions)
     Constant({ fg = hsl(c.green_shade) }), -- (*) Any constant
     String({ fg = hsl(c.orange404) }), --   A string constant: "this is a string"
     Character({ fg = hsl(c.orange404) }), --   A character constant: 'c', '\n'
-    Number({ fg = hsl(c.green_shade) }), --   A number constant: 234, 0xff
-    Boolean({ fg = hsl(c.green) }), --   A boolean constant: TRUE, false
-    Float({ fg = hsl(c.green_shade) }), --   A floating point constant: 2.3e10
+    -- Number({ fg = hsl(c.green_shade) }), --   A number constant: 234, 0xff
+    -- Boolean({ fg = hsl(c.green) }), --   A boolean constant: TRUE, false
+    -- Float({ fg = hsl(c.green_shade) }), --   A floating point constant: 2.3e10
 
-    Identifier({ fg = hsl(c.white_shade) }), -- (*) Any variable name
-    Function({ fg = hsl(c.yellow) }), --   Function name (also: methods for classes)
+    Identifier({ fg = hsl(c.yellow) }), -- (*) Any variable name
+    Function({ fg = hsl(c.blue) }), --   Function name (also: methods for classes)
 
-    Statement({ fg = hsl(c.purple_bright) }), -- (*) Any statement
-    Conditional({ fg = hsl(c.purple) }), --   if, then, else, endif, switch, etc.
-    Repeat({ fg = hsl(c.purple) }), --   for, do, while, etc.
-    Label({ fg = hsl(c.purple) }), --   case, default, etc.
+    Statement({ fg = hsl(c.purple) }), -- (*) Any statement
+    -- Conditional({ fg = hsl(c.purple) }), --   if, then, else, endif, switch, etc.
+    -- Repeat({ fg = hsl(c.purple) }), --   for, do, while, etc.
+    -- Label({ fg = hsl(c.purple) }), --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    Keyword({ fg = hsl(c.yellow) }), --   any other keyword
-    Exception({ fg = hsl(c.purple_shade) }), --   try, catch, throw
+    -- Keyword({ fg = hsl(c.yellow) }), --   any other keyword
+    -- Exception({ fg = hsl(c.purple_shade) }), --   try, catch, throw
 
-    -- PreProc        { }, -- (*) Generic Preprocessor
-    Include({ fg = hsl(c.yellow_dark) }), --   Preprocessor #include
+    PreProc({ fg = hsl(c.deep_red) }), -- (*) Generic Preprocessor
+    Include({ fg = hsl(c.deep_red) }), --   Preprocessor #include
     -- Define         { }, --   Preprocessor #define
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type({ fg = hsl(c.khaki) }), -- (*) int, long, char, etc.
+    Type({ fg = hsl(c.deep_red) }), -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    -- Special        { }, -- (*) Any special symbol
+    Special({ fg = hsl(c.purple) }), -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
-    -- Delimiter      { }, --   Character that needs attention
+    Delimiter({ fg = hsl(c.white_plat) }), --   Character that needs attention
     SpecialComment({ fg = hsl(c.deep_red) }), --   Special things inside a comment (e.g. '\n')
     -- Debug          { }, --   Debugging statements
     Underlined({ gui = "underline" }), -- Text that stands out, HTML links
@@ -242,18 +242,18 @@ local theme = lush(function(injected_functions)
     --
     -- For more information see https://github.com/rktjmp/lush.nvim/issues/109
 
-    -- sym"@text.literal"      { }, -- Comment
-    -- sym"@text.reference"    { }, -- Identifier
+    sym("@text.literal")({ fg = hsl(c.white_shade) }), -- Comment
+    sym("@text.reference")({ fg = hsl(c.yellow) }), -- Identifier
     -- sym"@text.title"        { }, -- Title
-    -- sym"@text.uri"          { }, -- Underlined
+    sym("@text.uri")({ fg = hsl(c.blue_light) }), -- Underlined
     -- sym"@text.underline"    { }, -- Underlined
-    -- sym"@text.todo"         { }, -- Todo
-    -- sym"@comment"           { }, -- Comment
+    sym("@text.todo")({ bg = hsl(c.blue) }), -- Todo
+    sym("@comment")({ fg = hsl(c.white_shade) }), -- Comment
     -- sym"@punctuation"       { }, -- Delimiter
     -- sym"@constant"          { }, -- Constant
     -- sym"@constant.builtin"  { }, -- Special
     -- sym"@constant.macro"    { }, -- Define
-    -- sym"@define"            { }, -- Define
+    sym("@define")({ fg = hsl(c.green_shade) }), -- Define
     -- sym"@macro"             { }, -- Macro
     -- sym"@string"            { }, -- String
     -- sym"@string.escape"     { }, -- SpecialChar
@@ -263,28 +263,28 @@ local theme = lush(function(injected_functions)
     -- sym"@number"            { }, -- Number
     -- sym"@boolean"           { }, -- Boolean
     sym("@float")({ fg = hsl(c.green_shade) }), -- Float
-    sym("@function")({ fg = hsl(c.purple) }), -- Function
+    sym("@function")({ fg = hsl(c.blue) }), -- Function
     sym("@function.builtin")({}), -- Special
     sym("@function.macro")({}), -- Macro
-    -- sym"@parameter"         { }, -- Identifier
-    -- sym"@method"            { }, -- Function
-    -- sym"@field"             { }, -- Identifier
-    -- sym"@property"          { }, -- Identifier
-    -- sym"@constructor"       { }, -- Special
-    -- sym"@conditional"       { }, -- Conditional
-    -- sym"@repeat"            { }, -- Repeat
+    sym("@parameter")({ fg = hsl(c.yellow) }), -- Identifier
+    sym("@method")({ fg = hsl(c.blue) }), -- Function
+    sym("@field")({ fg = hsl(c.yellow) }), -- Identifier
+    sym("@property")({ fg = hsl(c.yellow) }), -- Identifier
+    sym("@constructor")({ fg = hsl(c.blue) }), -- Special
+    sym("@conditional")({ fg = hsl(c.purple) }), -- Conditional
+    sym("@repeat")({ fg = hsl(c.purple) }), -- Repeat
     -- sym"@label"             { }, -- Label
     -- sym"@operator"          { }, -- Operator
     -- sym"@keyword"           { }, -- Keyword
-    -- sym"@exception"         { }, -- Exception
-    -- sym"@variable"          { }, -- Identifier
+    sym("@exception")({ fg = hsl(c.purple) }), -- Exception
+    sym("@variable")({ fg = hsl(c.yellow_dark) }), -- Identifier
     -- sym"@type"              { }, -- Type
     -- sym"@type.definition"   { }, -- Typedef
-    -- sym"@storageclass"      { }, -- StorageClass
-    -- sym"@structure"         { }, -- Structure
-    -- sym"@namespace"         { }, -- Identifier
-    -- sym"@include"           { }, -- Include
-    -- sym"@preproc"           { }, -- PreProc
+    sym("@storageclass")({ fg = hsl(c.deep_red) }), -- StorageClass
+    sym("@structure")({ fg = hsl(c.deep_red) }), -- Structure
+    sym("@namespace")({ fg = hsl(c.deep_red) }), -- Identifier
+    sym("@include")({ fg = hsl(c.deep_red) }), -- Include
+    sym("@preproc")({ fg = hsl(c.deep_red) }), -- PreProc
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
   }

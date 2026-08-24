@@ -6,21 +6,48 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter").install({
+      -- A
+      -- B
+      -- C
       "c",
-      "lua",
-      "vim",
-      "vimdoc",
-      "query",
-      "markdown",
-      "markdown_inline",
+      "c_sharp",
+      "css",
+      -- D
+      -- E
+      -- F
+      -- G
+      -- H
+      "html",
+      -- I
+      -- J
       "java",
       "javadoc",
-      "c_sharp",
+      -- K
+      -- L
+      "lua",
+      -- M
+      "markdown",
+      "markdown_inline",
+      -- N
+      -- O
+      -- P
+      "python",
+      -- Q
+      "query",
+      -- R
       "regex",
+      -- S
+      -- T
       "toml",
-      "html",
-      "css",
+      -- U
+      -- V
+      "vim",
+      "vimdoc",
+      -- W
+      -- X
+      -- Y
       "yaml",
+      -- Z
     })
   end,
 }
