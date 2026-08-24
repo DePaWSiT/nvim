@@ -144,7 +144,7 @@ local theme = lush(function(injected_functions)
 
     -- Comment({ fg = hsl(khaki) }), -- Any comment
 
-    -- Constant       { }, -- (*) Any constant
+    Constant({ fg = hsl(c.green_shade) }), -- (*) Any constant
     String({ fg = hsl(c.orange404) }), --   A string constant: "this is a string"
     Character({ fg = hsl(c.orange404) }), --   A character constant: 'c', '\n'
     Number({ fg = hsl(c.green_shade) }), --   A number constant: 234, 0xff
@@ -154,13 +154,13 @@ local theme = lush(function(injected_functions)
     Identifier({ fg = hsl(c.white_shade) }), -- (*) Any variable name
     Function({ fg = hsl(c.yellow) }), --   Function name (also: methods for classes)
 
-    -- Statement      { }, -- (*) Any statement
+    Statement({ fg = hsl(c.purple_bright) }), -- (*) Any statement
     Conditional({ fg = hsl(c.purple) }), --   if, then, else, endif, switch, etc.
     Repeat({ fg = hsl(c.purple) }), --   for, do, while, etc.
     Label({ fg = hsl(c.purple) }), --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
     Keyword({ fg = hsl(c.yellow) }), --   any other keyword
-    Exception({ fg = hsl(c.purple) }), --   try, catch, throw
+    Exception({ fg = hsl(c.purple_shade) }), --   try, catch, throw
 
     -- PreProc        { }, -- (*) Generic Preprocessor
     Include({ fg = hsl(c.yellow_dark) }), --   Preprocessor #include
@@ -168,7 +168,7 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    -- Type           { }, -- (*) int, long, char, etc.
+    Type({ fg = hsl(c.khaki) }), -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef

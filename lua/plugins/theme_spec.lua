@@ -26,5 +26,8 @@ return {
     opts = {
       style = "night",
     },
+    config = function()
+      vim.cmd.colorscheme("tokyonight-night")
+    end,
   },
 }
