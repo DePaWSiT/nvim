@@ -54,6 +54,13 @@ dotnet sdk and runtime ([visual studio installer](https://visualstudio.microsoft
 - git
 - fd or (debian)fd-find
 
+## Rust
+
+- neovim >= 0.12/
+- cargo/
+- [graphviz](https://graphviz.org/download/)/
+- lldb/
+
 ## Adding a lsp (Mason)
 
 Assuming that mason/bin is in PATH

@@ -36,6 +36,7 @@ return {
       "query",
       -- R
       "regex",
+      "rust",
       -- S
       -- T
       "toml",

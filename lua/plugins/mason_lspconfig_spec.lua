@@ -15,10 +15,11 @@ return {
       "ts_ls",
       "omnisharp",
       "jdtls",
+      "rust_analyzer",
       "lemminx",
     },
     automatic_enable = {
-      exclude = { "jdtls" },
+      exclude = { "jdtls", "rust_analyzer" },
     }, --config is done in lsp_config_spec.lua
   },
   config = function(_, opts)
