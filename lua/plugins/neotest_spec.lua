@@ -6,7 +6,7 @@ return {
     "nvim-lua/plenary.nvim",
     "antoinemadec/FixCursorHold.nvim",
     "nvim-treesitter/nvim-treesitter",
-    "Issafalcon/neotest-dotnet",
+    "Nsidorenco/neotest-vstest",
     "nvim-neotest/neotest-python",
     "nvim-neotest/neotest-go",
     "rouge8/neotest-rust",
@@ -14,17 +14,19 @@ return {
     "codymikol/neotest-kotlin",
     "rcasia/neotest-bash",
   },
-  opts = {
-    adapters = {
-      require("neotest-dotnet"),
-      require("neotest-python"),
-      require("neotest-go"),
-      require("neotest-rust"),
-      require("neotest-java"),
-      require("neotest-kotlin"),
-      require("neotest-bash"),
-    },
-  },
+  config = function()
+    require("neotest").setup({
+      adapters = {
+        require("neotest-vstest"),
+        require("neotest-python"),
+        require("neotest-go"),
+        require("neotest-rust"),
+        require("neotest-java"),
+        require("neotest-kotlin"),
+        require("neotest-bash"),
+      },
+    })
+  end,
   keys = function()
     local remap = require("DePaWSiT.remap")
     return {
