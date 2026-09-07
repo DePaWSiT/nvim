@@ -1,6 +1,10 @@
 return {
   "GustavEikaas/easy-dotnet.nvim",
   lazy = true,
+  enabled = function()
+    local lang = require("DePaWSiT.language")
+    return lang.csharp
+  end,
   ft = { "cs", "sln", "slnx", "csproj", "props", "csx", "targets" },
   cmd = "Dotnet",
   dependencies = { "nvim-lua/plenary.nvim" },

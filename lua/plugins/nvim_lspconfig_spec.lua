@@ -19,16 +19,16 @@ return {
         nmap(remap.LSP_CODE_ACTION, vim.lsp.buf.code_action, "[C]ode [A]ction")
 
         nmap(remap.LSP_GOTO_DEFINITION, function()
-          snacks.picker.lsp_definition()
+          snacks.picker.lsp_definitions()
         end, "[G]oto [D]efinition")
         nmap(remap.LSP_GOTO_DECLARATION, function()
-          snacks.picker.lsp_declaration()
+          snacks.picker.lsp_declarations()
         end, "[G]oto [D]eclaration")
         nmap(remap.LSP_GOTO_REFERENCES, function()
           snacks.picker.lsp_references()
         end, "[G]oto [R]eferences")
         nmap(remap.LSP_GOTO_IMPLEMENTATIONS, function()
-          snacks.picker.lsp_implementation()
+          snacks.picker.lsp_implementations()
         end, "[G]oto [I]mplementation")
         nmap(remap.LSP_TYPE_DEFINITION, function()
           snacks.picker.lsp_type_definitions()
@@ -37,7 +37,7 @@ return {
           snacks.picker.lsp_symbols()
         end, "[D]ocument [S]ymbols")
         nmap(remap.LSP_WORKSPACE_SYMBOLS, function()
-          snacks.picker.lsp_worlspace_symbols()
+          snacks.picker.lsp_workspace_symbols()
         end, "[W]orkspace [S]ymbols")
 
         -- See `:help K` for why this keymap
@@ -47,9 +47,7 @@ return {
         -- Lesser used LSP functionality
         nmap(remap.LSP_WORKSPACE_ADD_FOLDER, vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
         nmap(remap.LSP_WORKSPACE_REMOVE_FOLDER, vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
-        nmap(remap.LSP_WORKPLACE_LIST_FOLDERS, function()
-          print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-        end, "[W]orkspace [L]ist Folders")
+        nmap(remap.LSP_WORKPLACE_LIST_FOLDERS, function() end, "[W]orkspace [L]ist Folders")
 
         -- setup compiler config for omnisharp
         if client and client.name == "omnisharp" then

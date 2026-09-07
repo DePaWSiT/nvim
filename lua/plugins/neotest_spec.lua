@@ -14,19 +14,17 @@ return {
     "codymikol/neotest-kotlin",
     "rcasia/neotest-bash",
   },
-  config = function()
-    require("neotest").setup({
-      adapters = {
-        require("neotest-dotnet"),
-        require("neotest-python"),
-        require("neotest-go"),
-        require("neotest-rust"),
-        require("neotest-java"),
-        require("neotest-kotlin"),
-        require("neotest-bash"),
-      },
-    })
-  end,
+  opts = {
+    adapters = {
+      require("neotest-dotnet"),
+      require("neotest-python"),
+      require("neotest-go"),
+      require("neotest-rust"),
+      require("neotest-java"),
+      require("neotest-kotlin"),
+      require("neotest-bash"),
+    },
+  },
   keys = function()
     local remap = require("DePaWSiT.remap")
     return {
@@ -49,18 +47,10 @@ return {
       {
         remap.RUN_TEST_NEAR_DAP,
         function()
-          require("neotest").run.run({ strategy = "dap" })
+          require("neotest").run.run({ strategy = "dap", suite = false })
         end,
         node = "n",
         desc = "Run nearest test (DAP)",
-      },
-      {
-        remap.RUN_TEST_FILE_DAP,
-        function()
-          require("neotest").run.run(vim.fn.expand("%"), { strategy = "dap" })
-        end,
-        node = "n",
-        desc = "Run tests in file (DAP)",
       },
       {
         remap.STOP_TEST,

@@ -42,8 +42,8 @@ return {
       end, "Prev Hunk")
       map("n", remap.GIT_LAST_HUNK, function() gs.nav_hunk("last") end, "Last Hunk")
       map("n", remap.GIT_FIRST_HUNK, function() gs.nav_hunk("first") end, "First Hunk")
-      map({ "n", "v" }, remap.GIT_STAGE_HUNK, ":Gitsigns stage_hunk<CR>", "Stage Hunk")
-      map({ "n", "v" }, remap.GIT_RESET_HUNK, ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+      map({ "n", "v" }, remap.GIT_STAGE_HUNK, function() vim.cmd.Gitsigns("stage_hunk") end, "Stage Hunk")
+      map({ "n", "v" }, remap.GIT_RESET_HUNK, function() vim.cmd.Gitsigns("reset_hunk") end, "Reset Hunk")
       map("n", remap.GIT_STAGE_BUFFER, gs.stage_buffer, "Stage Buffer")
       map("n", remap.GIT_UNDO_STAGE_HUNK, gs.undo_stage_hunk, "Undo Stage Hunk")
       map("n", remap.GIT_RESET_BUFFER, gs.reset_buffer, "Reset Buffer")
@@ -52,7 +52,7 @@ return {
       map("n", remap.GIT_BLAME_BUFFER, function() gs.blame() end, "Blame Buffer")
       map("n", remap.GIT_DIFF_THIS, gs.diffthis, "Diff This")
       map("n", remap.GIT_DIFF_SPECIAL, function() gs.diffthis("~") end, "Diff This ~")
-      map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+      map({ "o", "x" }, "ih", function() vim.cmd.Gitsigns("select_hunk") end, "GitSigns Select Hunk")
     end,
   },
 }
