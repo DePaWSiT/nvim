@@ -48,15 +48,6 @@ return {
         nmap(remap.LSP_WORKSPACE_ADD_FOLDER, vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
         nmap(remap.LSP_WORKSPACE_REMOVE_FOLDER, vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
         nmap(remap.LSP_WORKPLACE_LIST_FOLDERS, function() end, "[W]orkspace [L]ist Folders")
-
-        -- setup compiler config for omnisharp
-        if client and client.name == "omnisharp" then
-          local extended = require("omnisharp_extended")
-          nmap(remap.LSP_GOTO_DEFINITION, extended.lsp_definition, "[G]oto [D]efinition")
-          nmap(remap.LSP_GOTO_REFERENCES, extended.lsp_references, "[G]oto [R]eferences")
-          nmap(remap.LSP_GOTO_IMPLEMENTATIONS, extended.lsp_implementation, "[G]oto [I]mplementation")
-          nmap(remap.LSP_TYPE_DEFINITION, extended.lsp_type_definition, "T[y]pe Definition")
-        end
       end,
     })
 
@@ -67,16 +58,6 @@ return {
       bashls = {},
       zuban = {},
       html = {},
-      omnisharp = {
-        settings = {
-          RoslynExtensionsOptions = {
-            EnableAnalyzersSupport = true,
-            EnableImportCompletion = true,
-            AnalyzeOpenDocumentsOnly = true,
-            EnableDecompilationSupport = true,
-          },
-        },
-      },
       lemminx = {},
     }
 

@@ -10,11 +10,12 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
     projx_lsp = {
-      enabled = false,
+      enabled = true,
     },
     lsp = {
-      enabled = false,
-      roslynator_enabled = false,
+      enabled = true,
+      roslynator_enabled = true,
+      suggest_updates = false,
     },
   },
   dev = false,

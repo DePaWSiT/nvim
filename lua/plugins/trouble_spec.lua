@@ -1,62 +1,71 @@
 return {
   "folke/trouble.nvim",
-  cmd = { "Trouble" },
   opts = {
     modes = {
-      test = {
-        mode = "diagnostics",
-        preview = {
+      symbols = {
+        win = {
           type = "split",
-          relative = "win",
+          relative = "editor",
+          size = 0.33,
           position = "right",
-          size = 0.4,
         },
       },
-      lsp = {
-        win = { position = "right" },
+      diagnostic_float = {
+        mode = "diagnostics",
+        preview = {
+          type = "float",
+          relative = "editor",
+          border = "rounded",
+          title = "Preview",
+          title_pos = "center",
+          position = { 0, -2 },
+          size = { width = 0.3, height = 0.3 },
+          zindex = 200,
+        },
+      },
+      diagnostic_float_buffer = {
+        mode = "diagnostics",
+        filter = {
+          buf = 0,
+        },
+        preview = {
+          type = "float",
+          relative = "editor",
+          border = "rounded",
+          title = "Preview",
+          title_pos = "center",
+          position = { 0, -2 },
+          size = { width = 0.3, height = 0.3 },
+          zindex = 200,
+        },
       },
     },
   },
+  lazy = false,
+  cmd = { "Trouble" },
   keys = function()
     local map = require("DePaWSiT.remap")
     return {
-      { map.TROUBLE_DIAGNOSTIC_TOGGLE, "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
+      {
+        map.TROUBLE_DIAGNOSTIC_TOGGLE,
+        function()
+          require("trouble").toggle("diagnostic_float")
+        end,
+        desc = "Diagnostics (Trouble)",
+      },
       {
         map.TROUBLE_DIAGNOSTIC_CURRENT_BUFFER,
-        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        function()
+          require("trouble").toggle("diagnostic_float_buffer")
+        end,
         desc = "Buffer Diagnostics (Trouble)",
       },
-      { map.TROUBLE_SYMBOLS_TOGGLE, "<cmd>Trouble symbols toggle<cr>", desc = "Symbols (Trouble)" },
-      { map.TROUBLE_LSP_TOGGLE, "<cmd>Trouble lsp toggle<cr>", desc = "LSP references/definitions/... (Trouble)" },
-      { map.TROUBLE_LOCATION_LIST, "<cmd>Trouble loclist toggle<cr>", desc = "Location List (Trouble)" },
-      { map.TROUBLE_QFLIST, "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)" },
       {
-        map.PREV_TROUBLE_ITEM,
+        map.TROUBLE_SYMBOLS_TOGGLE,
         function()
-          if require("trouble").is_open() then
-            require("trouble").prev({ skip_groups = true, jump = true })
-          else
-            local ok, err = pcall(vim.cmd.cprev)
-            if not ok then
-              vim.notify(err, vim.log.levels.ERROR)
-            end
-          end
+          require("trouble").toggle("symbols")
         end,
-        desc = "Previous Trouble/Quickfix Item",
-      },
-      {
-        map.NEXT_TROUBLE_ITEM,
-        function()
-          if require("trouble").is_open() then
-            require("trouble").next({ skip_groups = true, jump = true })
-          else
-            local ok, err = pcall(vim.cmd.cnext)
-            if not ok then
-              vim.notify(err, vim.log.levels.ERROR)
-            end
-          end
-        end,
-        desc = "Next Trouble/Quickfix Item",
+        desc = "Symbols (Trouble)",
       },
     }
   end,
