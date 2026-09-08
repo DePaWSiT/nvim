@@ -141,14 +141,9 @@ local map = {
   MARKDOWN_SPLIT_REDRAW = "<leader>msr",
 
   --Trouble
-  TROUBLE_DIAGNOSTIC_TOGGLE = "<leader>xx",
-  TROUBLE_DIAGNOSTIC_CURRENT_BUFFER = "<leader>xX",
-  TROUBLE_SYMBOLS_TOGGLE = "<leader>cs",
-  TROUBLE_LSP_TOGGLE = "<leader>cS",
-  TROUBLE_LOCATION_LIST = "<leader>xL",
-  TROUBLE_QFLIST = "<leader>xQ",
-  PREV_TROUBLE_ITEM = "[q",
-  NEXT_TROUBLE_ITEM = "]q",
+  TROUBLE_DIAGNOSTIC_TOGGLE = "<leader>xd",
+  TROUBLE_DIAGNOSTIC_CURRENT_BUFFER = "<leader>xD",
+  TROUBLE_SYMBOLS_TOGGLE = "<leader>xs",
   --Todo-comments
   TODO_TOGGLE = "<leader>xt",
   TODO_TOGGLE_FILTER = "<leader>xT",

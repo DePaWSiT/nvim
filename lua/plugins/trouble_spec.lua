@@ -6,7 +6,7 @@ return {
         win = {
           type = "split",
           relative = "editor",
-          size = 0.33,
+          size = 0.3,
           position = "right",
         },
       },
